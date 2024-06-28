@@ -93,7 +93,7 @@ const Section = styled.section`
 
 
 const CTAButton = styled.button`
-  background-color: #BB86FC;
+  background-color: #007BFF;
   color: #121212;
   border: none;
   padding: 15px 30px;
@@ -139,7 +139,7 @@ const List = styled.ul`
 `;
 
 // Estilização adicional para destacar as listas
-const HighlightedList = styled(List)`
+export const HighlightedList = styled(List)`
   background-color: #1F1F1F;
   padding: 15px;
   border-radius: 8px;
@@ -340,7 +340,7 @@ Esse mundo não está fora do seu alcance. Está a poucos passos, com <strong>Ma
           <li>Imagine acordar todos os dias com um propósito claro, sabendo exatamente para onde está indo.</li>
           <li>Imagine se sentir inabalável em sua confiança, capaz de enfrentar qualquer desafio que a vida lhe apresente.</li>
           <li>Imagine construir relacionamentos que são fonte de força e alegria, e não de estresse e frustração.</li>
-          <li>Imagine ter controle total sobre suas finanças, com um plano claro para alcançar segurança e sucesso financeiro.</li>
+          <li>Imagine <strong>não se preocupar com dinheiro</strong>, com um plano claro para alcançar segurança e sucesso financeiro.</li>
           <li>Imagine ser o líder que sempre desejou ser, inspirando e influenciando os outros de forma positiva.</li>
           <li>Imagine estar em sua melhor forma física e mental, equilibrado e energizado.</li>
         </HighlightedList>
@@ -351,7 +351,7 @@ Esse mundo não está fora do seu alcance. Está a poucos passos, com <strong>Ma
         <SectionTitle>O Que Nossos Leitores Estão Falando</SectionTitle>
         <Carousel testimonials={testimonials} />
       </Section>
-      <CTAButton>COMPRE AGORA POR R$33,70 - OFERTA DE LANÇAMENTO!</CTAButton>
+      <CTAButton>COMPRE AGORA POR R$33,70 - OFERTA PARA NOVOS LEITORES!</CTAButton>
 
       <Section ref={sectionRef}>
         <SectionTitle>Tudo Que Você Precisa Saber</SectionTitle>
@@ -371,7 +371,7 @@ Esse mundo não está fora do seu alcance. Está a poucos passos, com <strong>Ma
           </video>
         </VideoWrapper>
       </Section>
-        <CTAButton>COMPRE AGORA POR R$33,70 - OFERTA DE LANÇAMENTO!</CTAButton>
+        <CTAButton>COMPRE AGORA POR R$33,70 - OFERTA DE RELANÇAMENTO!</CTAButton>
         <p><strong>Oferta Especial - Não Perca Essa Oportunidade!</strong><br/><br/>
 De <s><span style={{ color: '#FF0000' }}>R$55,90 </span></s>
  por apenas <u><span style={{ color: '#00FF00' }}>R$33,70</span></u> | <strong>39% de desconto!</strong> <br/><br/>- Essa é a sua chance de obter "Masculinidade Magnética" com um desconto exclusivo de lançamento.<br/><br/> A promoção é válida até 18 de julho de 2024. Após essa data, o preço volta ao valor original.</p>
