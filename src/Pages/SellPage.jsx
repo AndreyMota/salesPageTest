@@ -5,6 +5,9 @@ import meuvideo from '../assets/7DiasDeGarantia720x1920.mp4';
 import wojack from '../assets/tiredWojack-removebg.png';
 import Carousel from '../Components/Carousel.jsx';
 import artwork from '../assets/artwork.png';
+import ogim from '../assets/ogim.png';
+import { Helmet } from 'react-helmet-async';
+import CTAButton from '../Components/CTAButton.jsx';
 
 
 // Styled Components
@@ -91,33 +94,6 @@ const Section = styled.section`
   animation: ${fadeIn} 1s ease-out forwards;
 `;
 
-
-const CTAButton = styled.button`
-  background-color: #007BFF;
-  color: #121212;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1.2em;
-  cursor: pointer;
-  margin: 20px auto;
-  display: block;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  
-  &:hover {
-    background-color: #9E6EDC;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1em;
-    padding: 10px 20px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.9em;
-    padding: 8px 16px;
-  }
-`;
 
 const VideoWrapper = styled.div`
   width: 100%;
@@ -290,6 +266,20 @@ const SalePage = () => {
 
   return (
     <>
+    {/* <Helmet>
+    <title>Masculinidade Magnética - Transforme sua Vida Hoje</title>
+    <meta name="description" content="Um guia prático para superar inseguranças, atrair mulheres e alcançar seu potencial máximo." />
+    <meta name="keywords" content="masculinidade, confiança, autoajuda, desenvolvimento pessoal, relacionamentos, sucesso financeiro" />
+    <meta property="og:title" content="Masculinidade Magnética - Transforme sua Vida Hoje" />
+    <meta property="og:description" content="Um guia prático para superar inseguranças, atrair mulheres e alcançar seu potencial máximo." />
+    <meta property="og:image" content="URL_DA_SUA_IMAGEM" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Masculinidade Magnética - Transforme sua Vida Hoje" />
+    <meta name="twitter:description" content="Um guia prático para superar inseguranças, atrair mulheres e alcançar seu potencial máximo." />
+    <meta name="twitter:image" content="URL_DA_SUA_IMAGEM" />
+    </Helmet> */}
+
+    
     <ContainerCabecalho>
       <Headline ref={headlineRef}>Descubra o Poder de uma Masculinidade Confiante e Transformadora</Headline>
       <Subheadline ref={subheadlineRef}>Um guia prático para superar inseguranças, atrair mulheres e alcançar seu potencial máximo</Subheadline>
@@ -351,7 +341,7 @@ Esse mundo não está fora do seu alcance. Está a poucos passos, com <strong>Ma
         <SectionTitle>O Que Nossos Leitores Estão Falando</SectionTitle>
         <Carousel testimonials={testimonials} />
       </Section>
-      <CTAButton>COMPRE AGORA POR R$33,70 - OFERTA PARA NOVOS LEITORES!</CTAButton>
+      <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>COMPRE AGORA POR R$33,70 - OFERTA PARA NOVOS LEITORES!</CTAButton>
 
       <Section ref={sectionRef}>
         <SectionTitle>Tudo Que Você Precisa Saber</SectionTitle>
@@ -371,7 +361,7 @@ Esse mundo não está fora do seu alcance. Está a poucos passos, com <strong>Ma
           </video>
         </VideoWrapper>
       </Section>
-        <CTAButton>COMPRE AGORA POR R$33,70 - OFERTA DE RELANÇAMENTO!</CTAButton>
+        <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>COMPRE AGORA POR R$33,70 - OFERTA DE RELANÇAMENTO!</CTAButton>
         <p><strong>Oferta Especial - Não Perca Essa Oportunidade!</strong><br/><br/>
 De <s><span style={{ color: '#FF0000' }}>R$55,90 </span></s>
  por apenas <u><span style={{ color: '#00FF00' }}>R$33,70</span></u> | <strong>39% de desconto!</strong> <br/><br/>- Essa é a sua chance de obter "Masculinidade Magnética" com um desconto exclusivo de lançamento.<br/><br/> A promoção é válida até 18 de julho de 2024. Após essa data, o preço volta ao valor original.</p>
@@ -386,7 +376,7 @@ De <s><span style={{ color: '#FF0000' }}>R$55,90 </span></s>
         </HighlightedList>
         <p>A escolha é sua.<br/> Você pode continuar lutando contra os mesmos problemas ou pode dar o primeiro passo em direção à vida que sempre desejou.<br/> Clique no botão abaixo e transforme sua vida com "Masculinidade Magnética".</p>
       </Section>
-      <CTAButton>Quero Adquirir Meu eBook Com 39% de Desconto Agora!</CTAButton>
+      <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Quero Adquirir Meu eBook Com 39% de Desconto Agora!</CTAButton>
 
       <Section ref={sectionRef}>
         <SectionTitle>Por que funciona?</SectionTitle>
@@ -409,7 +399,7 @@ De <s><span style={{ color: '#FF0000' }}>R$55,90 </span></s>
           <li>eBook "Masculinidade Magnética" (200+ páginas)</li>
         </List>
         <p>De R$ 55,90 por apenas R$ 33,70!</p>
-        <CTAButton>Quero Adquirir Meu eBook Com 39% de Desconto Agora!</CTAButton>
+        <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Quero Adquirir Meu eBook Com 39% de Desconto Agora!</CTAButton>
       </Section>
 
       <Section ref={sectionRef}>
@@ -437,7 +427,7 @@ De <s><span style={{ color: '#FF0000' }}>R$55,90 </span></s>
         </FAQItem>
       </Section>
 
-      <CTAButton>Compre Agora</CTAButton>
+      <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Aproveite o Desconto de 39% Agora</CTAButton>
     </Container>
     </>
   );

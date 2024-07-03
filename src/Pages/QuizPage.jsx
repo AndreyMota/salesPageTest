@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { darken } from 'polished';
 import styled from 'styled-components';
 import idade from '../assets/quiz/idade.jpg';
 import proposito from '../assets/quiz/proposito.jpeg';
@@ -14,6 +15,8 @@ import pense from '../assets/quiz/pense.gif';
 import dinheiro from '../assets/quiz/dinheiro.jpg';
 import lider from '../assets/quiz/lidercut.jpg';
 import caminho from '../assets/quiz/caminho.jpg';
+import perfeito from '../assets/quiz/perfeito.webp';
+import renda from '../assets/quiz/rendaC.gif';
 import { HighlightedList } from './SellPage';
 
 const QuizContainer = styled.div`
@@ -74,9 +77,10 @@ const Subtitle = styled.h2`
   }
 `;
 
+
 const OptionButton = styled.button`
-  background-color: #BB86FC;
-  color: #121212;
+  background-color: ${props => props.bgcolor || '#BB86FC'};
+  color: ${props => props.textColor || 'black'}; // Padrão para branco
   border: none;
   padding: 15px 30px;
   font-size: 1.2em;
@@ -87,7 +91,7 @@ const OptionButton = styled.button`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #9E6EDC;
+    background-color: ${props => props.bgcolor ? darken(0.1, props.bgcolor) : '#9E6EDC'};
   }
 `;
 
@@ -112,6 +116,22 @@ const ResultDescription = styled.p`
   margin-top: 10px;
 `;
 
+const CTAButton = styled.button`
+  background-color: #FF6F61;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #E55C50;
+  }
+`;
+
 const Quiz = () => {
   const [step, setStep] = useState(0);
   const [score, setScore] = useState(0);
@@ -119,6 +139,7 @@ const Quiz = () => {
   const [problems, setProblems] = useState([]);
   const [ambitions, setAmbitions] = useState([]);
   const [quizFinished, setQuizFinished] = useState(false); // Novo estado para indicar que o quiz foi finalizado
+  const [answer, setAnswer] = useState(null);
 
   const questions = [
     {
@@ -146,7 +167,16 @@ const Quiz = () => {
       image: pense,
     },
     {
-      title: "Você sente que falta um propósito claro em sua vida?",
+      title: "Sente que não está se esforçando o suficiente e que poderia dar mais(Lá ele) de si?",
+      options: [
+        ["Sim, frequentemente me pego procrastinando", 1],
+        ["Eu quase sempre faço o que tenho que fazer", 2],
+        ["Não, eu sou perfeito e os outros é que se esforçam mais do que é preciso", 3]
+      ],
+      image: perfeito,
+    },
+    {
+      title: "Você sente que falta um senso de direção claro em sua vida?",
       options: [
         ["Sim, muitas vezes", 1],
         ["Às vezes, mas é confuso", 2],
@@ -157,27 +187,37 @@ const Quiz = () => {
     {
       title: "Quão confiante você se sente em situações sociais?",
       options: [
-        ["Raramente me sinto confiante", 1],
-        ["Depende da situação", 2],
-        ["Quase sempre estou confiante", 3]
+        ["Raramente me sinto confiante e as pessoas dizem que sou tímido", 1],
+        ["Depende da situação, com meus amigos sou tagarela", 2],
+        ["Quase sempre estou confiante e consigo conversar com qualquer pessoa", 3]
       ],
       image: inseguranca,
     },
     {
       title: "Como você avalia sua capacidade de gerenciar suas finanças pessoais?",
       options: [
-        ["Sempre preocupado com dinheiro", 1],
-        ["Consigo gerenciar, mas com dificuldade", 2],
-        ["Estou seguro e no controle", 3]
+        ["Sempre preocupado com dinheiro, lato no quintal pra economizar cachorro", 1],
+        ["Consigo gerenciar com dificuldade, sou brasileiro médio", 2],
+        ["Estou seguro e no controle, posso adquirir tudo o que eu quero", 3]
       ],
       image: financas,
     },
     {
-      title: "Você se sente satisfeito com a direção da sua carreira?",
+      title: "Qual sua fonte de renda atual?",
       options: [
-        ["Não, estou perdido", 1],
-        ["Tenho algumas ideias, mas pouca clareza", 2],
-        ["Sim, tenho objetivos claros", 3]
+        ["Sou CLT", 1],
+        ["Sou empresário", 3],
+        ["Sou autônomo", 2],
+        ["Estou desempregado", 1]
+      ],
+      image: renda,
+    },
+    {
+      title: "Como você se sente em relação à sua carreira ou situação profissional atual?",
+      options: [
+        ["Estou satisfeito com minha situação atual", 1],
+        ["Estou buscando novas oportunidades ou melhorias", 2],
+        ["Estou insatisfeito e quero uma mudança significativa", 3]
       ],
       image: carreira,
     },
@@ -270,16 +310,25 @@ const Quiz = () => {
 
   // Adicionar ou remover o evento beforeunload dependendo da etapa do quiz
   useEffect(() => {
-    if (step > 0 && step < questions.length - 2) {
+    if (step > 0 && step < questions.length) {
       // Adiciona o evento antes da descarga (beforeunload) ao iniciar o quiz
       window.addEventListener('beforeunload', handleBeforeUnload);
-      console.log("Evento beforeunload adicionado");
     } else {
       // Remove o evento ao finalizar o quiz ou ao iniciar
       window.removeEventListener('beforeunload', handleBeforeUnload);
-      console.log("Evento beforeunload removido");
     }
-  }, [step, !quizFinished]);
+
+    return () => {
+      // Limpa o evento quando o componente é desmontado
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [step]);
+
+  useEffect(() => {
+    if (quizFinished) {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    }
+  }, [quizFinished]);
 
 
 
@@ -299,6 +348,8 @@ const Quiz = () => {
       console.log("Quiz terminou poha")
       setQuizFinished(true);
     } else {
+      console.log("Quiz terminou poha")
+      setQuizFinished(true);
       // Remover o evento beforeunload e redirecionar para a página de vendas
       window.removeEventListener('beforeunload', handleBeforeUnload);
       console.log("Redirecionando para a página de vendas...");
@@ -334,7 +385,7 @@ const Quiz = () => {
       ]);
       setResult({
         title: "Explorador Perdido",
-        description: "Você está em um ponto onde está buscando um sentido e direção na vida. Há desafios significativos que precisam ser enfrentados para que você possa se sentir seguro e realizado.",
+        description: "Você está em um ponto onde busca sentido e direção na vida. Há desafios significativos a serem enfrentados para alcançar segurança e realização. Focar em autoconhecimento e habilidades práticas ajudará a navegar por esses desafios.",
       });
     } else if (finalScore <= 30) {
       setProblems([
@@ -349,7 +400,7 @@ const Quiz = () => {
       ]);
       setResult({
         title: "Buscador de Clareza",
-        description: "Você tem alguns objetivos e um senso geral de direção, mas há áreas que ainda precisam de mais clareza e foco para alcançar o sucesso desejado.",
+        description: "Você tem alguns objetivos e um senso geral de direção, mas ainda precisa de mais clareza e foco em áreas específicas para alcançar o sucesso desejado. Refinar suas metas e desenvolver habilidades focadas são os próximos passos.",
       });
     } else if (finalScore <= 40) {
       setProblems([
@@ -364,7 +415,7 @@ const Quiz = () => {
       ]);
       setResult({
         title: "Aperfeiçoador de Habilidades",
-        description: "Você está confiante e no controle de muitas áreas da sua vida, mas está sempre buscando maneiras de melhorar e aperfeiçoar suas habilidades e conhecimentos.",
+        description: "Você está confiante e no controle de muitas áreas da sua vida, mas está sempre buscando maneiras de melhorar e aperfeiçoar suas habilidades e conhecimentos. A jornada para a excelência é contínua e você está no caminho certo.",
       });
     } else {
       setProblems([
@@ -379,7 +430,7 @@ const Quiz = () => {
       ]);
       setResult({
         title: "Líder Aspirante",
-        description: "Você deseja ou já está em uma posição de liderança e está buscando maneiras de expandir sua influência e impactar positivamente sua comunidade ou ambiente de trabalho. ",
+        description: "Você deseja ou já está em uma posição de liderança e está buscando maneiras de expandir sua influência e impactar positivamente sua comunidade ou ambiente de trabalho. Continuar desenvolvendo suas habilidades de liderança será crucial para maximizar seu impacto.",
       });
     }
   };
@@ -392,6 +443,7 @@ const Quiz = () => {
           <ProgressBar>
             <Progress progress={(step + 1) / questions.length * 100} />
           </ProgressBar>
+          
           <QuestionTitle>{questions[step].title}</QuestionTitle>
           <Subtitle>{questions[step].subtitle}</Subtitle>
           {questions[step].options.map((option, index) => (
@@ -400,6 +452,9 @@ const Quiz = () => {
             </OptionButton>
           ))}
           {questions[step].image && <QuestionImage src={questions[step].image} alt="question related" />}
+          {/* {step === 2 && <CTAButton onClick={() => setStep(step + 1)}>Saiba mais sobre como resolver esses problemas.</CTAButton>} */}
+          {/* {step === 6 && <CTAButton onClick={() => setStep(step + 1)}>Veja como alcançar isso!</CTAButton>} */}
+          {/* {step === 10 && <CTAButton onClick={() => setStep(step + 1)}>Descubra a solução agora.</CTAButton>}  */}
         </>
       ) : (
         <>
@@ -424,8 +479,8 @@ const Quiz = () => {
           <Subtitle>O segredo é parar de correr atrás das borboletas... E cuidar do jardim para que elas venham até você.</Subtitle>
           <ResultDescription>Descubra os segredos do progresso acelerado e do desenvolvimento pessoal, inspirados pelos ensinamentos de antigos mestres e filósofos contemporâneos. Explore como você pode transformar sua vida em um curto espaço de tempo.</ResultDescription>
 
-          <OptionButton onClick={handleRedirectClick}>
-            Conheça estratégias para o seu crescimento.
+          <OptionButton bgcolor="#28a745" textColor="#FFFFFF" onClick={handleRedirectClick}>
+            Conheça estratégias para o seu crescimento. Clique aqui para saber mais.
           </OptionButton>
         </>
       )}
