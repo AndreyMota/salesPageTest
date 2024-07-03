@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import styled, {keyframes} from 'styled-components';
 import { Link, animateScroll as scroll, scroller } from 'react-scroll';
-import meuvideo from '../assets/7DiasDeGarantia720x1920.mp4';
-import wojack from '../assets/tiredWojack-removebg.png';
+import meuvideo from '/7DiasDeGarantia720x1920.mp4';
+import wojack from '/tiredWojack-removebg.png';
 import Carousel from '../Components/Carousel.jsx';
-import artwork from '../assets/artwork.png';
-import ogim from '../assets/ogim.png';
+import artwork from '/artwork.png';
+import ogim from '/ogim.png';
 import { Helmet } from 'react-helmet-async';
 import CTAButton from '../Components/CTAButton.jsx';
 

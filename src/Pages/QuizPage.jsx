@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { darken } from 'polished';
 import styled from 'styled-components';
-import idade from '../assets/quiz/idade.jpg';
-import proposito from '../assets/quiz/proposito.jpeg';
-import inseguranca from '../assets/quiz/inseguranca.jpg';
-import financas from '../assets/quiz/financas.png';
-import mental from '../assets/quiz/mental.jpeg';
-import carreira from '../assets/quiz/carreira.jpg';
-import porpuse from '../assets/quiz/porpuse.jpg';
-import relacionamento from '../assets/quiz/relacionamentocut.png';
-import confianca from '../assets/quiz/confidence.jpeg';
-import elevator from '../assets/quiz/elevator.jpeg';
-import pense from '../assets/quiz/pense.gif';
-import dinheiro from '../assets/quiz/dinheiro.jpg';
-import lider from '../assets/quiz/lidercut.jpg';
-import caminho from '../assets/quiz/caminho.jpg';
-import perfeito from '../assets/quiz/perfeito.webp';
-import renda from '../assets/quiz/rendaC.gif';
+import idade from '/quiz/idade.jpg';
+import proposito from '/quiz/proposito.jpeg';
+import inseguranca from '/quiz/inseguranca.jpg';
+import financas from '/quiz/financas.png';
+import mental from '/quiz/mental.jpeg';
+import carreira from '/quiz/carreira.jpg';
+import porpuse from '/quiz/porpuse.jpg';
+import relacionamento from '/quiz/relacionamentocut.png';
+import confianca from '/quiz/confidence.jpeg';
+import elevator from '/quiz/elevator.jpeg';
+import pense from '/quiz/pense.gif';
+import dinheiro from '/quiz/dinheiro.jpg';
+import lider from '/quiz/lidercut.jpg';
+import caminho from '/quiz/caminho.jpg';
+import perfeito from '/quiz/perfeito.webp';
+import renda from '/quiz/rendaC.gif';
 import { HighlightedList } from './SellPage';
 
 const QuizContainer = styled.div`
