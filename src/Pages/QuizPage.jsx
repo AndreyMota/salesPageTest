@@ -354,14 +354,14 @@ const Quiz = () => {
       window.removeEventListener('beforeunload', handleBeforeUnload);
       console.log("Redirecionando para a página de vendas...");
       // Redirecionar para a página de vendas
-      window.location.href = "/";
+      window.location.href = "/DescubraOSeuPotencial";
     }
   };
 
   const handleRedirectClick = () => {
     window.removeEventListener('beforeunload', handleBeforeUnload);
     console.log("Redirecionando após quiz finalizado...");
-    window.location.href = "/";
+    window.location.href = "/DescubraOSeuPotencial";
   };
   
   

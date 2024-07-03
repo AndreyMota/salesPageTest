@@ -10,8 +10,8 @@ export default function App() {
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<SalePage />} />
-          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/" element={<Quiz />} />
+          <Route path="/DescubraOSeuPotencial" element={<SalePage />} />
         </Routes>
       </BrowserRouter>
     </>
