@@ -23,10 +23,14 @@ const fadeIn = keyframes`
 `;
 
 const Container = styled.div`
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto; 
   padding: 20px;
   color: #E0E0E0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ContainerCabecalho = styled.div`
@@ -83,6 +87,7 @@ const Subheadline = styled.h2`
 `;
 
 const Section = styled.section`
+  max-width: 900px;
   margin: 40px 0;
   display: flex;
   flex-direction: column;
@@ -180,6 +185,25 @@ const StyledParagraph = styled.p`
   }
 `;
 
+const Footer = styled.footer`
+  background-color: #333; /* Cor de fundo escura para destaque */
+  color: #fff; /* Cor do texto branco para contraste */
+  text-align: center; /* Centraliza o texto */
+  padding: 20px; /* Espaçamento interno */
+  /* Fixa o rodapé na parte inferior da página */
+  /* Largura total da página */
+  font-size: 0.9em; /* Tamanho da fonte um pouco menor */
+`;
+
+const FooterText = styled.p`
+  margin: 5px 0; /* Margem mínima para espaçamento entre parágrafos */
+`;
+
+const Highlight = styled.span`
+  color: #ff9900; /* Cor laranja para destacar */
+  font-weight: bold; /* Negrito para ênfase */
+`;
+
 const SalePage = () => {
   const headlineRef = useRef(null);
   const subheadlineRef = useRef(null);
@@ -246,8 +270,8 @@ const SalePage = () => {
 
   const testimonials = [
     {
-      message: "Eu estava perdido, sem direção, mas depois de ler 'Masculinidade Magnética', minha vida mudou completamente. Agora, acordo todos os dias com um propósito claro e uma confiança renovada. Recomendo a todos os homens que querem transformar suas vidas.",
-      author: 'Anônimo'
+      message: "Eu estava perdido, sem direção, mas depois de ler 'Masculinidade Magnética', minha vida mudou completamente. Agora, acordo todos os dias com um propósito claro e uma confiança renovada.[...] Recomendo a todos os homens que querem transformar suas vidas.",
+      author: 'Pediu anônimato.'
     },
     {
       message: "Este eBook me deu as ferramentas que eu precisava para superar minhas inseguranças e melhorar meus relacionamentos. Minha vida financeira também nunca esteve tão organizada. Um investimento que valeu cada centavo.",
@@ -260,7 +284,11 @@ const SalePage = () => {
     {
       message: "Eu realmente não achava que o livro tinha tanto conteúdo útil, comprei incredulo, já tinha gastado dinheiro com vários cursos de 'gurus da sedução', mas nenhum deles conseguiu realmente abrir meus olhos e dar uma direção. Ainda uso o livro para consultas de vez em quando.",
       author: 'Marcelo C., Programador'
-    }
+    },
+    {
+      message: "Depois de ler Masculinidade Magnética, minha confiança disparou. Não só as mulheres começaram a notar, mas eu também consegui uma promoção no trabalho.",
+      author: "Johan A., Gerente"
+    },
   ];
   
 
@@ -281,61 +309,64 @@ const SalePage = () => {
 
     
     <ContainerCabecalho>
-      <Headline ref={headlineRef}>Descubra o Poder de uma Masculinidade Confiante e Transformadora</Headline>
-      <Subheadline ref={subheadlineRef}>Um guia prático para superar inseguranças, atrair mulheres e alcançar seu potencial máximo</Subheadline>
+      <Headline ref={headlineRef}>Você Está Cansado de Ser Ignorado Pelas Mulheres?</Headline>
+      <Subheadline ref={subheadlineRef}>Descubra o segredo dos homens que elas desejam. Transforme sua vida com o guia "<u>Masculinidade Magnética</u>".</Subheadline>
     </ContainerCabecalho>
     <Container>
       <Section ref={sectionRef}>
-        <SectionTitle>Masculinidade Magnética - Transforme sua Vida Hoje</SectionTitle>
-        <p><strong>Descubra a Chave para a Confiança Inabalável e o Sucesso Duradouro: </strong><br/> <br/> 
-Você já se sentiu perdido, sem direção, lutando para encontrar seu propósito?<br/><br/> Você não está sozinho. Muitos homens enfrentam desafios semelhantes diariamente. <br/><br/> Imagine um mundo onde você é verdadeiramente autoconfiante, onde cada passo que você dá é cheio de propósito e direção.<br/><br/>
-
-Esse mundo não está fora do seu alcance. Está a poucos passos, com <strong>Masculinidade Magnética.</strong></p>
-      </Section>
+        <SectionTitle>Transforme Sua Vida Hoje com "Masculinidade Magnética"</SectionTitle>
+        <p><strong>Está Cansado de Correr Atrás e Não Receber Atenção?</strong><br/><br/>
+        Você se sente como se sempre estivesse se esforçando para conquistar a atenção de uma mulher, mas nunca obtém o resultado desejado? <br/><br/>
+        Talvez você se pergunte por que outros homens conseguem atrair mulheres sem esforço enquanto você fica de lado.<br/><br/>
+        A verdade é que a atenção feminina não é dada aos que se esforçam desesperadamente. Ela vai para aqueles que estão focados em si mesmos e em suas próprias jornadas.<br/><br/>
+        <strong>Masculinidade Magnética</strong> mostra como você pode se tornar esse homem que naturalmente atrai o interesse e a atenção, sem precisar implorar por isso.
+        </p>
+      </Section> 
 
       <Section ref={sectionRef}>
         <SectionTitle>Por Que Este eBook é Diferente?</SectionTitle>
         <p>Nosso eBook de 200+ páginas oferece um guia completo para você se tornar o homem que sempre quis ser.</p>
         <HighlightedList>
+          <li><strong>Atração Natural:</strong> Descubra como a verdadeira confiança e um propósito forte transformam você em um imã para mulheres.</li>
+          <li><strong>Construção de Relacionamentos:</strong> Estratégias práticas para construir conexões genuínas e duradouras com mulheres.</li>
+          <li><strong>Propósito de Vida:</strong> Encontre e siga seu verdadeiro propósito, atraindo mulheres que querem fazer parte da sua jornada.</li>
+          <li><strong>Sucesso em Todos os Campos:</strong> Gerencie suas finanças, melhore sua saúde e desenvolva habilidades de liderança que impressionam a todos.</li>
+          <li><strong>Confiança Inabalável:</strong> Supere inseguranças e torne-se o homem que você e as mulheres admiram.</li>
           <li><strong>Segredos Ancestrais:</strong> Aprenda com mestres antigos e modernos - de Platão a Tony Robbins - e aplique sua sabedoria para uma transformação real.</li>
-          <li><strong>Soluções Comprovadas:</strong> Estratégias testadas e comprovadas para superar inseguranças e construir relacionamentos fortes e saudáveis.</li>
-          <li><strong>Propósito de Vida:</strong> Ferramentas práticas para descobrir seu verdadeiro propósito e viver uma vida com significado.</li>
-          <li><strong>Sucesso Financeiro:</strong> Conselhos práticos para gerenciar suas finanças e construir riqueza de forma sustentável.</li>
-          <li><strong>Liderança Eficaz:</strong> Desenvolva habilidades de liderança que inspiram e influenciam, tanto na vida pessoal quanto na profissional.</li>
         </HighlightedList>
       </Section>
+
 
       <Section ref={sectionRef}>
         <SectionTitle>Você Reconhece Estes Sentimentos?</SectionTitle>
         <img src={wojack} width={200} height={200}></img>
-        <p>“Eu sinto que estou à deriva, sem um propósito claro.”</p>
-        <p>“Minha confiança está sempre oscilando, nunca me sinto seguro de mim mesmo.”</p>
+        <p>“Eu sinto que estou sempre à margem, nunca sendo o centro da atenção delas”</p>
+        <p>“Minha confiança desmorona quando estou perto de mulheres atraentes.”</p>
         <p>“Meus relacionamentos são uma constante luta, nada parece dar certo.”</p>
+        <p>“Parece que minha vida está estagnada, sem direção ou propósito.”</p>
         <p>“Finanças? Estou sempre no vermelho, sem saber para onde vai meu dinheiro.”</p>
-        <p>“Gostaria de ser um líder, mas não sei por onde começar.”</p>
-        <p>“Minha saúde física e mental está sempre em segundo plano, estou exausto.”</p>
-        <p>Esses são os desafios que "Masculinidade Magnética" foi projetado para resolver. <strong>Você não precisa enfrentar essas batalhas sozinho.</strong></p>
+        <p>Esses são os desafios que "Masculinidade Magnética" foi projetado para resolver. <strong>Você não precisa mais enfrentar esses problemas sozinho.</strong></p>
       </Section>
 
       <Section ref={sectionRef}>
-        <SectionTitle>
-        Uma Nova Perspectiva
-        </SectionTitle>
+        <SectionTitle>Uma Nova Perspectiva</SectionTitle>
         <p>Eu entendo onde você está agora.<br/><br/>
-          A sensação de estar perdido, de não ser bom o suficiente, de lutar para encontrar um propósito verdadeiro. 
-          <br/><br/>Já estive lá. Muitos dos homens que conhecemos enfrentam essa luta.
-          <br/> Mas e se eu lhe dissesse que essa <strong>sensação de vazio</strong> pode ser transformada em <strong>confiança e clareza</strong>?</p>
+          A sensação de ser constantemente ignorado pelas mulheres, de lutar para encontrar seu lugar e propósito.<br/><br/>
+          Já estive lá. Muitos homens enfrentam essas dificuldades.<br/><br/>
+          Mas e se eu lhe dissesse que essa <strong>sensação de rejeição</strong> pode ser transformada em <strong>confiança e clareza</strong>?<br/><br/>
+          Não é apenas sobre atrair mulheres. É sobre se tornar o homem que naturalmente atrai atenção porque ele está no controle da sua própria vida.</p>
         <p><strong>Imagine uma Vida Diferente</strong></p>
         <HighlightedList>
-          <li>Imagine acordar todos os dias com um propósito claro, sabendo exatamente para onde está indo.</li>
-          <li>Imagine se sentir inabalável em sua confiança, capaz de enfrentar qualquer desafio que a vida lhe apresente.</li>
-          <li>Imagine construir relacionamentos que são fonte de força e alegria, e não de estresse e frustração.</li>
-          <li>Imagine <strong>não se preocupar com dinheiro</strong>, com um plano claro para alcançar segurança e sucesso financeiro.</li>
-          <li>Imagine ser o líder que sempre desejou ser, inspirando e influenciando os outros de forma positiva.</li>
+          <li>Imagine acordar todos os dias com um propósito claro e um destino que você mesmo escolheu.</li>
+          <li>Imagine ser tão confiante que você não precisa se esforçar para ser notado, seja pelas mulheres ou no trabalho.</li>
+          <li>Imagine construir relacionamentos que são fontes de apoio e inspiração, em vez de frustração.</li>
+          <li>Imagine ter um plano claro para alcançar segurança financeira e sucesso duradouro.</li>
+          <li>Imagine liderar com carisma e influência, tanto na vida pessoal quanto profissional.</li>
           <li>Imagine estar em sua melhor forma física e mental, equilibrado e energizado.</li>
         </HighlightedList>
         <p>Essas não são apenas ilusões. <strong>Essa é a realidade que "Masculinidade Magnética" pode ajudar você a alcançar.</strong></p>
       </Section>
+
 
       <Section ref={sectionRef}>
         <SectionTitle>O Que Nossos Leitores Estão Falando</SectionTitle>
@@ -374,37 +405,21 @@ De <s><span style={{ color: '#FF0000' }}>R$55,90 </span></s>
           <li>1. Continuar no Caminho Atual: Continuar enfrentando os mesmos desafios, lutando com inseguranças, falta de propósito, dificuldades financeiras e relacionamentos problemáticos. É um caminho difícil e solitário.</li>
           <li>2. Escolher a Transformação: Investir em "Masculinidade Magnética" hoje e começar sua jornada para uma vida de confiança, propósito e sucesso. É um caminho que leva à realização e ao equilíbrio.</li>
         </HighlightedList>
-        <p>A escolha é sua.<br/> Você pode continuar lutando contra os mesmos problemas ou pode dar o primeiro passo em direção à vida que sempre desejou.<br/> Clique no botão abaixo e transforme sua vida com "Masculinidade Magnética".</p>
+        <p>A escolha é sua.<br/> Você pode continuar lutando contra os mesmos problemas ou pode dar o primeiro passo em direção à vida que sempre desejou.<br/> <strong>Clique no botão abaixo</strong> e transforme sua vida com "Masculinidade Magnética".</p>
       </Section>
       <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Quero Adquirir Meu eBook Com 39% de Desconto Agora!</CTAButton>
 
       <Section ref={sectionRef}>
-        <SectionTitle>Por que funciona?</SectionTitle>
-        <p>"Masculinidade Magnética" é baseado em anos de pesquisa e práticas comprovadas. Ele combina sabedoria antiga e estratégias modernas para oferecer um guia prático e eficiente.</p>
-      </Section>
-
-      <Section ref={sectionRef}>
-        <SectionTitle>Como funciona?</SectionTitle>
-        <p>O eBook oferece um plano passo a passo para você desenvolver suas habilidades e transformar sua vida. Cada capítulo aborda uma área essencial do autodesenvolvimento masculino, com técnicas práticas e exercícios.</p>
-      </Section>
-
-      <Section ref={sectionRef}>
-        <SectionTitle>Para quem é?</SectionTitle>
-        <p>Este eBook é para qualquer homem que deseja melhorar sua vida, superar inseguranças e se tornar mais confiante e bem-sucedido.</p>
-      </Section>
-
-      <Section ref={sectionRef}>
-        <SectionTitle>O que você receberá:</SectionTitle>
-        <List>
-          <li>eBook "Masculinidade Magnética" (200+ páginas)</li>
-        </List>
-        <p>De R$ 55,90 por apenas R$ 33,70!</p>
-        <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Quero Adquirir Meu eBook Com 39% de Desconto Agora!</CTAButton>
-      </Section>
-
-      <Section ref={sectionRef}>
-        <SectionTitle>Garantia</SectionTitle>
-        <p>Oferecemos uma garantia de 7 dias. Se você não estiver satisfeito, devolvemos seu dinheiro.</p>
+        <SectionTitle>Por Que Isso Funciona?</SectionTitle>
+        <p>“Masculinidade Magnética” não é apenas um eBook. É um programa completo baseado em:</p>
+        <HighlightedList>
+          <li><strong>Psicologia do Desenvolvimento Masculino:</strong> Técnicas baseadas em como os homens realmente crescem e se transformam.</li>
+          <li><strong>Experiência Pessoal e Profissional:</strong> Insights que vêm de anos de experiência ajudando homens a alcançar seu potencial.</li>
+          <li><strong>Resultados Comprovados:</strong> Testemunhos de homens que usaram essas estratégias para transformar suas vidas.</li>
+          <li><strong>Praticidade e Ação:</strong> Ferramentas práticas e estratégias acionáveis que você pode começar a usar imediatamente.</li>
+        </HighlightedList>
+        <p>Não é sobre teorias ou promessas vazias. É sobre transformação real e tangível.</p>
+        <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Adquira Agora e Transforme Sua Vida!</CTAButton>
       </Section>
 
       <Section ref={sectionRef}>
@@ -429,6 +444,10 @@ De <s><span style={{ color: '#FF0000' }}>R$55,90 </span></s>
 
       <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Aproveite o Desconto de 39% Agora</CTAButton>
     </Container>
+    <Footer>
+      <FooterText>© 2024 <Highlight>Max Strong</Highlight>. Todos os direitos reservados.</FooterText>
+      <FooterText>“<Highlight>Masculinidade Magnética</Highlight>” - Sua Transformação Começa Agora</FooterText>
+    </Footer>
     </>
   );
 };

@@ -17,6 +17,8 @@ import lider from '/quiz/lidercut.jpg';
 import caminho from '/quiz/caminho.jpg';
 import perfeito from '/quiz/perfeito.webp';
 import renda from '/quiz/rendaC.gif';
+import autoimagem from '/quiz/autoimagem.jpg';
+import conversa from '/quiz/conversaC.gif';
 import { HighlightedList } from './SellPage';
 
 const QuizContainer = styled.div`
@@ -145,7 +147,7 @@ const Quiz = () => {
     {
       title: "Este Guia Vai Te Fazer Avançar 6 Anos Em 6 MESES Na Sua Jornada Como Um Homem De Valor",
       subtitle: "Descubra onde Você está com esse Teste de 2 minutos",
-      options: [["Comecar Teste Gratuito", 0]],
+      options: [["Começar Teste Gratuito", 0]],
       image: caminho,
     },
     {
@@ -194,6 +196,24 @@ const Quiz = () => {
       image: inseguranca,
     },
     {
+      title: "Você acha que sua aparência ou atitude impacta na forma como as mulheres te percebem?",
+      options: [
+        ["Sim, sinto que poderia melhorar minha aparência ou atitude", 1],
+        ["Talvez, mas não tenho certeza do que precisa mudar", 2],
+        ["Não, estou confiante na minha aparência e atitude", 3]
+      ],
+      image: autoimagem,  // Substitua por um caminho de imagem apropriado
+    },
+    {
+      title: "Como você se sente ao iniciar uma conversa com uma mulher que você não conhece?",
+      options: [
+        ["Me sinto muito nervoso e inseguro", 1],
+        ["Depende da situação, às vezes sou confiante", 2],
+        ["Estou confortável e seguro ao iniciar conversas", 3]
+      ],
+      image: conversa,  // Substitua por um caminho de imagem apropriado
+    },
+    {
       title: "Como você avalia sua capacidade de gerenciar suas finanças pessoais?",
       options: [
         ["Sempre preocupado com dinheiro, lato no quintal pra economizar cachorro", 1],
@@ -240,20 +260,11 @@ const Quiz = () => {
       image: relacionamento,
     },
     {
-      title: "Como você se sentiria acordando todos os dias com um propósito claro?",
+      title: "Qual seria o impacto de desenvolver uma autoconfiança inabalável na sua vida social e amorosa?",
       options: [
-        ["Motivado e energizado", 1],
-        ["Interessado, mas com dúvidas", 2],
-        ["Não vejo muita diferença", 3] //inverti as pontuações aqui
-      ],
-      image: porpuse,
-    },
-    {
-      title: "Qual seria o impacto de desenvolver uma autoconfiança inabalável?",
-      options: [
-        ["Transformaria minha vida completamente", 1],
-        ["Seria uma melhoria significativa", 2],
-        ["Não faria muita diferença", 3]
+        ["Transformaria minha vida amorosa completamente", 1],
+        ["Seria uma melhoria significativa nas minhas interações", 2],
+        ["Não faria muita diferença, já sou confiante", 3]
       ],
       image: confianca,
     },
@@ -301,6 +312,7 @@ const Quiz = () => {
       ],
     }
   ];
+  
 
   // Função para lidar com o evento beforeunload
   const handleBeforeUnload = (event) => {
@@ -369,71 +381,72 @@ const Quiz = () => {
   const determineResult = (finalScore) => {
     setProblems([]);
     setAmbitions([]);
-    // Ajustando os intervalos de pontuação
+    
     if (finalScore <= 20) {
       setProblems([
         "Falta de direção e propósito claro na vida.",
-        "Insegurança e baixa autoestima.",
+        "Insegurança e baixa autoestima, especialmente em interações sociais.",
         "Dificuldades financeiras e gestão.",
-        "Relacionamentos instáveis e problemáticos."
+        "Relacionamentos instáveis e problemáticos, incluindo dificuldades em atrair e manter a atenção feminina."
       ]);
       setAmbitions([
         "Encontrar um propósito significativo.",
-        "Desenvolver autoconfiança e segurança emocional.",
+        "Desenvolver autoconfiança e segurança emocional para se sentir mais atraente.",
         "Melhorar a saúde financeira e o controle sobre o dinheiro.",
-        "Construir relacionamentos mais saudáveis e satisfatórios."
+        "Construir relacionamentos mais saudáveis e satisfatórios, especialmente com o sexo oposto."
       ]);
       setResult({
         title: "Explorador Perdido",
-        description: "Você está em um ponto onde busca sentido e direção na vida. Há desafios significativos a serem enfrentados para alcançar segurança e realização. Focar em autoconhecimento e habilidades práticas ajudará a navegar por esses desafios.",
+        description: "Você está em um ponto onde busca sentido e direção na vida. Enfrenta desafios significativos que impactam sua autoconfiança e capacidade de atrair a atenção feminina. Focar em autoconhecimento e habilidades sociais ajudará a navegar por esses desafios e melhorar suas interações."
       });
     } else if (finalScore <= 30) {
       setProblems([
         "Falta de clareza em objetivos e metas.",
-        "Necessidade de desenvolver habilidades específicas.",
-        "Desafios em certas áreas da vida que precisam ser melhorados."
+        "Necessidade de desenvolver habilidades específicas, incluindo sociais.",
+        "Desafios em se destacar e atrair a atenção em ambientes sociais."
       ]);
       setAmbitions([
         "Definir metas claras e alcançáveis.",
-        "Desenvolver habilidades necessárias para o sucesso.",
-        "Melhorar em áreas específicas da vida pessoal e profissional."
+        "Desenvolver habilidades sociais e de comunicação para aumentar sua presença e atração.",
+        "Melhorar em áreas específicas da vida pessoal e profissional, e se tornar mais atrativo para as mulheres."
       ]);
       setResult({
         title: "Buscador de Clareza",
-        description: "Você tem alguns objetivos e um senso geral de direção, mas ainda precisa de mais clareza e foco em áreas específicas para alcançar o sucesso desejado. Refinar suas metas e desenvolver habilidades focadas são os próximos passos.",
+        description: "Você tem alguns objetivos e um senso geral de direção, mas ainda precisa de mais clareza e foco, especialmente em como se destacar em interações sociais e atrair a atenção feminina. Refinar suas metas e desenvolver suas habilidades sociais são os próximos passos."
       });
     } else if (finalScore <= 40) {
       setProblems([
-        "Desejo contínuo de melhorar e aperfeiçoar habilidades.",
-        "Busca por conhecimentos e estratégias avançadas.",
-        "Satisfação em diversas áreas, mas ainda buscando excelência."
+        "Desejo contínuo de melhorar e aperfeiçoar habilidades, incluindo habilidades de atração e interação.",
+        "Busca por conhecimentos e estratégias avançadas para aumentar seu impacto social.",
+        "Satisfação em diversas áreas, mas ainda buscando excelência em se conectar com os outros, especialmente com mulheres."
       ]);
       setAmbitions([
-        "Dominar habilidades já existentes.",
-        "Adquirir novos conhecimentos e estratégias avançadas.",
-        "Alcançar a excelência e o sucesso pleno em todas as áreas."
+        "Dominar habilidades já existentes e se tornar irresistível em interações sociais.",
+        "Adquirir novos conhecimentos e estratégias para aumentar sua atratividade e presença social.",
+        "Alcançar a excelência e o sucesso pleno em todas as áreas, incluindo sua vida amorosa."
       ]);
       setResult({
         title: "Aperfeiçoador de Habilidades",
-        description: "Você está confiante e no controle de muitas áreas da sua vida, mas está sempre buscando maneiras de melhorar e aperfeiçoar suas habilidades e conhecimentos. A jornada para a excelência é contínua e você está no caminho certo.",
+        description: "Você está confiante e no controle de muitas áreas da sua vida, mas está sempre buscando maneiras de melhorar e aperfeiçoar suas habilidades, inclusive em como se tornar mais atraente e confiante em interações com mulheres. A jornada para a excelência é contínua e você está no caminho certo."
       });
     } else {
       setProblems([
-        "Desejo de expandir influência e liderança.",
-        "Necessidade de estratégias avançadas de liderança.",
-        "Objetivo de impactar positivamente comunidade ou trabalho."
+        "Desejo de expandir influência e liderança, especialmente em contextos sociais.",
+        "Necessidade de estratégias avançadas para se destacar como líder e atrair seguidores.",
+        "Objetivo de impactar positivamente a comunidade ou o trabalho e atrair a atenção das pessoas ao seu redor, inclusive mulheres."
       ]);
       setAmbitions([
-        "Expandir influência e impacto positivo.",
-        "Dominar estratégias avançadas de liderança.",
-        "Alcançar posições de destaque e liderança eficaz."
+        "Expandir influência e impacto positivo, se tornando um modelo de atração e liderança.",
+        "Dominar estratégias avançadas de liderança e se tornar irresistível em seu círculo social.",
+        "Alcançar posições de destaque e liderança eficaz, e ser reconhecido por sua presença forte e atrativa."
       ]);
       setResult({
         title: "Líder Aspirante",
-        description: "Você deseja ou já está em uma posição de liderança e está buscando maneiras de expandir sua influência e impactar positivamente sua comunidade ou ambiente de trabalho. Continuar desenvolvendo suas habilidades de liderança será crucial para maximizar seu impacto.",
+        description: "Você deseja ou já está em uma posição de liderança e está buscando maneiras de expandir sua influência, tanto em sua carreira quanto em sua vida social. Continuar desenvolvendo suas habilidades de liderança e atração será crucial para maximizar seu impacto e se tornar irresistível em seu ambiente."
       });
     }
   };
+  
   
 
   return (
