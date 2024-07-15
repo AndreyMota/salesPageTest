@@ -8,12 +8,24 @@ const CarouselContainer = styled.div`
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+  
+
+  @media (max-width: 768px) {
+    width: calc(100% - 20px); /* Adiciona um pequeno padding nas laterais */
+    max-width: 100%;
+    min-width: unset;
+  }
 `;
 
 const CarouselWrapper = styled.div`
   display: flex;
   transition: transform 0.5s ease-in-out;
   transform: ${({ currentIndex }) => `translateX(-${currentIndex * 100}%)`};
+  width: ${({ itemCount }) => `${itemCount * 100}%`}; /* Ajusta a largura do wrapper com base no número de itens */
+  
+  @media (max-width: 768px) {
+    padding-right: 20px;
+  }
 `;
 
 const CarouselItem = styled.div`
@@ -22,6 +34,11 @@ const CarouselItem = styled.div`
   opacity: ${({ isCurrent }) => (isCurrent ? '1' : '0.5')};
   transition: opacity 0.5s ease-in-out;
   text-align: center;
+
+  @media (max-width: 768px) {
+    min-width: 100%;
+    padding: 0 10px; /* Ajusta o padding para telas menores */
+  }
 `;
 
 const Testimonial = styled.div`
@@ -31,6 +48,10 @@ const Testimonial = styled.div`
   margin: 10px;
   color: #E0E0E0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  
+  @media (max-width: 768px) {
+    padding: 20px 15px; /* Ajusta o padding para telas menores */
+  }
 `;
 
 const Author = styled.p`
@@ -59,7 +80,8 @@ const NavigationButton = styled.button`
   ${({ direction }) => (direction === 'prev' ? 'left: 10px;' : 'right: 10px;')}
   
   @media (max-width: 768px) {
-    display: none;
+    opacity: 0.3;
+    /* display: none; */
   }
 `;
 
@@ -67,21 +89,18 @@ const Carousel = ({ testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const intervalRef = useRef(null);
 
-  // Função para passar para o slide anterior
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
     setCurrentIndex(isFirstSlide ? testimonials.length - 1 : currentIndex - 1);
     resetInterval();
   };
 
-  // Função para passar para o próximo slide
   const nextSlide = () => {
     const isLastSlide = currentIndex === testimonials.length - 1;
     setCurrentIndex(isLastSlide ? 0 : currentIndex + 1);
     resetInterval();
   };
 
-  // Função para reiniciar o intervalo de autorrolagem
   const resetInterval = () => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
@@ -93,10 +112,8 @@ const Carousel = ({ testimonials }) => {
     }, 10000);
   };
 
-  // Configuração do intervalo de autorrolagem ao montar o componente
   useEffect(() => {
     resetInterval();
-    // Limpar o intervalo ao desmontar o componente
     return () => {
       clearInterval(intervalRef.current);
     };
