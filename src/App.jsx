@@ -13,7 +13,7 @@ export default function App() {
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/quiz" element={<QuizB />}/>
+          <Route path="/" element={<QuizB />}/>
           <Route path="/DescubraOSeuPotencial" element={<SalePage />}/>    
         </Routes>
       </BrowserRouter>
