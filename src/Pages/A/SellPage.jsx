@@ -422,10 +422,10 @@ const SalePage = () => {
           </video>
         </VideoWrapper>
       </Section>
-        <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>COMPRE AGORA POR R$33,70 - OFERTA DE RELANÇAMENTO!</CTAButton>
-        <p><strong>Oferta Especial - Não Perca Essa Oportunidade!</strong><br/><br/>
-De <s><span style={{ color: '#FF0000' }}>R$55,90 </span></s>
- por apenas <u><span style={{ color: '#00FF00' }}>R$33,70</span></u> | <strong>39% de desconto!</strong> <br/><br/>- Essa é a sua chance de obter "Masculinidade Magnética" com um desconto exclusivo de lançamento.<br/><br/> A promoção é válida até 31 de julho. Após essa data, o preço volta ao valor original.</p>
+        <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>COMPRE AGORA POR R$33,70 - OFERTA DE RELANÇAMENTO</CTAButton>
+        <p><strong>Oferta Especial - Não Perca Essa Oportunidade</strong><br/><br/>
+De <span style={{ color: '#FF0000' }}>R$55,90 </span>
+ por apenas <u><span style={{ color: '#00FF00' }}>R$33,70</span></u> | <strong>39% de desconto! | +BÔNUS</strong> <br/><br/>- Essa é a sua chance de obter Masculinidade Magnética com um desconto exclusivo de relançamento.<br/><br/> A promoção é válida por tempo LIMITADO</p>
       </Section>
 
       <Section ref={sectionRef}>
