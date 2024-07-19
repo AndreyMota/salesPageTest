@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled, {keyframes} from 'styled-components';
 import { Link, animateScroll as scroll, scroller } from 'react-scroll';
-import meuvideo from '/7DiasDeGarantia720x1920.mp4';
+import meuvideo from '/criativoSp.mp4';
 import wojack from '/tiredWojack-removebg.png';
 import Carousel from '../../Components/Carousel.jsx';
 import artwork from '/artwork.png';
