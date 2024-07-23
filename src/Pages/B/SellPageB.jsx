@@ -53,7 +53,11 @@ const Headline = styled.h1`
   font-size: 3em;
   text-align: center;
   margin-bottom: 20px;
-  color: #BB86FC;
+  background-image: linear-gradient(to right, #008df2, #00a4fa, #00b9f9, #00ccf3, #00ddeb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
   opacity: 0;
   transform: translateY(50px);

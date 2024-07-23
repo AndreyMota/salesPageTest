@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const StyledLink = styled.a`
-  background-color: #007BFF;
-  color: #121212;
+  background-image: linear-gradient(to right, #007BFF, #0056B3); /* Gradiente de azul */
+  color: #FFFFFF; /* Cor do texto para contraste */
   text-decoration: none;
   max-width: 600px;
   padding: 15px 30px; /* Ajuste o padding conforme necessário */
@@ -10,12 +10,13 @@ const StyledLink = styled.a`
   display: block;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s;
   text-align: center;
   margin: 20px auto;
+  box-shadow: 0px 14px 56px -11px #0056B3; /* Sombra azul escura */
 
   &:hover {
-    background-color: #9E6EDC;
+    background-image: linear-gradient(to right, #9E6EDC, #6E44FF); /* Gradiente ao passar o mouse */
   }
 
   @media (max-width: 768px) {
@@ -38,6 +39,7 @@ const CTAButton = ({ link, children }) => {
 };
 
 export default CTAButton;
+
 
 
 /* const CTAButton = styled.button`
