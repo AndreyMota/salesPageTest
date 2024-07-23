@@ -4,7 +4,7 @@ import { Link, animateScroll as scroll, scroller } from 'react-scroll';
 import meuvideo from '/criativoSp.mp4';
 import wojack from '/tiredWojack-removebg.png';
 import Carousel from '../../Components/Carousel.jsx';
-import artwork from '/artwork.png';
+import artwork from '/mainBG.jpg';
 import ogim from '/ogim.png';
 import { Helmet } from 'react-helmet';
 import CTAButton from '../../Components/CTAButton.jsx';
@@ -44,17 +44,23 @@ const ContainerCabecalho = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* margin: 0 auto; */
   padding: 20px;
   color: #E0E0E0;
+  box-shadow: 0 25px 20px rgba(128, 0, 128, 0.2); /* Sombra roxa para iluminação de fundo */
 `;
+
+
 
 const Headline = styled.h1`
   font-size: 3em;
   text-align: center;
   margin-bottom: 20px;
-  color: #BB86FC;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  background-image: linear-gradient(to right, #008df2, #00a4fa, #00b9f9, #00ccf3, #00ddeb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 5px rgba(255, 255, 255, 0.5);
   opacity: 0;
   transform: translateY(50px);
   animation: ${fadeIn} 1s ease-out forwards;
@@ -68,12 +74,17 @@ const Headline = styled.h1`
   }
 `;
 
+
 const Subheadline = styled.h2`
   font-size: 1.75em;
   text-align: center;
   margin-bottom: 40px;
-  color: #BB86FC;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  background-image: linear-gradient(to right, #00c6ff, #0072ff); /* Gradiente semelhante ao do Headline */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 3px rgba(255, 255, 255, 0.5); /* Sombra suave */
   opacity: 0;
   transform: translateY(50px);
   animation: ${fadeIn} 1s ease-out forwards;
@@ -100,7 +111,7 @@ const Section = styled.section`
   animation: ${fadeIn} 1s ease-out forwards;
   @media (max-width: 768px) {
     max-width: 100%;
-    margin: 20px;
+    margin: 20px 0;
   }
 `;
 
@@ -111,7 +122,6 @@ const VideoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   video {
     width: 100%;
     height: auto;
@@ -339,8 +349,8 @@ const SalePage = () => {
 
     
     <ContainerCabecalho>
-      <Headline ref={headlineRef}>Você Está Cansado de Ser Ignorado Pelas Mulheres?</Headline>
-      <Subheadline ref={subheadlineRef}>Descubra o segredo dos homens que elas desejam. Transforme sua vida com o guia "<u>Masculinidade Magnética</u>".</Subheadline>
+      <Headline ref={headlineRef}>Está Cansado de Ser Ignorado Pelas Mulheres?</Headline>
+      <Subheadline ref={subheadlineRef}>Descubra o segredo dos homens que elas desejam. Transforme sua vida com o guia <u>Masculinidade Magnética</u>.</Subheadline>
     </ContainerCabecalho>
     <Container>
       <Section ref={sectionRef}>
@@ -348,10 +358,29 @@ const SalePage = () => {
         <p><strong>Está Cansado de Correr Atrás e Não Receber Atenção?</strong><br/><br/>
         Você se sente como se sempre estivesse se esforçando para conquistar a atenção de uma mulher, mas nunca obtém o resultado desejado? <br/><br/>
         Talvez você se pergunte por que outros homens conseguem atrair mulheres sem esforço enquanto você fica de lado.<br/><br/>
-        A verdade é que a atenção feminina não é dada aos que se esforçam desesperadamente. Ela vai para aqueles que estão focados em si mesmos e em suas próprias jornadas.<br/><br/>
-        <strong>Masculinidade Magnética</strong> mostra como você pode se tornar esse homem que naturalmente atrai o interesse e a atenção, sem precisar implorar por isso.
+        A verdade é que a atenção feminina não é dada aos que se <strong>esforçam desesperadamente</strong>. Ela vai para aqueles que estão focados em si mesmos e em suas próprias jornadas.<br/><br/>
+        <strong>Masculinidade Magnética</strong> mostra como você pode se tornar o tipo de homem que naturalmente atrai o interesse e a atenção, sem precisar implorar por isso.
         </p>
       </Section> 
+
+      <Section ref={sectionRef}>
+        <SectionTitle>Uma Nova Perspectiva</SectionTitle>
+        <p>Eu entendo onde você está agora.<br/><br/>
+          A sensação de ser constantemente ignorado pelas mulheres, de lutar para crescer.<br/><br/>
+          Já estive lá. Todos os homens enfrentam essas dificuldades.<br/><br/>
+          Mas e se eu lhe dissesse que essa <strong>sensação de rejeição</strong> pode ser transformada em <strong>confiança e clareza</strong>?<br/><br/>
+          Não é apenas sobre atrair mulheres. É sobre se tornar o homem que naturalmente atrai atenção porque ele está no controle da sua própria vida.</p>
+        <p><strong>Imagine uma Vida Diferente</strong></p>
+        <HighlightedList>
+          <li>Imagine acordar todos os dias com um objetivo claro e um destino que você mesmo escolheu.</li>
+          <li>Imagine ser tão confiante que você não precisa se esforçar para ser notado, seja pelas mulheres ou no trabalho.</li>
+          <li>Imagine construir relacionamentos que são fontes de apoio e inspiração, em vez de frustração.</li>
+          <li>Imagine ter um plano claro para alcançar segurança financeira e sucesso duradouro.</li>
+          <li>Imagine liderar com carisma e influência, tanto na vida pessoal quanto profissional.</li>
+          <li>Imagine estar em sua melhor forma física e mental, equilibrado e energizado.</li>
+        </HighlightedList>
+        <p>Essas não são apenas ilusões. Essa é a realidade que <strong>Masculinidade Magnética</strong> pode guiar você a alcançar.</p>
+      </Section>
 
       <Section ref={sectionRef}>
         <SectionTitle>Por Que Este eBook é Diferente?</SectionTitle>
@@ -379,26 +408,6 @@ const SalePage = () => {
       </Section> */}
 
       <Section ref={sectionRef}>
-        <SectionTitle>Uma Nova Perspectiva</SectionTitle>
-        <p>Eu entendo onde você está agora.<br/><br/>
-          A sensação de ser constantemente ignorado pelas mulheres, de lutar para encontrar seu lugar e propósito.<br/><br/>
-          Já estive lá. Muitos homens enfrentam essas dificuldades.<br/><br/>
-          Mas e se eu lhe dissesse que essa <strong>sensação de rejeição</strong> pode ser transformada em <strong>confiança e clareza</strong>?<br/><br/>
-          Não é apenas sobre atrair mulheres. É sobre se tornar o homem que naturalmente atrai atenção porque ele está no controle da sua própria vida.</p>
-        <p><strong>Imagine uma Vida Diferente</strong></p>
-        <HighlightedList>
-          <li>Imagine acordar todos os dias com um propósito claro e um destino que você mesmo escolheu.</li>
-          <li>Imagine ser tão confiante que você não precisa se esforçar para ser notado, seja pelas mulheres ou no trabalho.</li>
-          <li>Imagine construir relacionamentos que são fontes de apoio e inspiração, em vez de frustração.</li>
-          <li>Imagine ter um plano claro para alcançar segurança financeira e sucesso duradouro.</li>
-          <li>Imagine liderar com carisma e influência, tanto na vida pessoal quanto profissional.</li>
-          <li>Imagine estar em sua melhor forma física e mental, equilibrado e energizado.</li>
-        </HighlightedList>
-        <p>Essas não são apenas ilusões. <strong>Essa é a realidade que "Masculinidade Magnética" pode ajudar você a alcançar.</strong></p>
-      </Section>
-
-
-      <Section ref={sectionRef}>
         <SectionTitle>O Que Nossos Leitores Estão Falando</SectionTitle>
         <Carousel testimonials={testimonials} />
       </Section>
@@ -406,7 +415,7 @@ const SalePage = () => {
 
       <Section ref={sectionRef}>
         <SectionTitle>Tudo Que Você Precisa Saber</SectionTitle>
-        <p>"Masculinidade Magnética" é o seu guia completo para transformar sua vida. <br/><br/>Com este eBook, você aprenderá a:</p>
+        <p>Masculinidade Magnética é o seu guia completo para o autoaperfeiçoamento <br/><br/>Com este guia, você aprenderá a:</p>
         <StyledParagraph>-Construir uma confiança inabalável. <br/><br/>
 -Descobrir e seguir seu verdadeiro propósito. <br/><br/>
 -Melhorar suas habilidades de relacionamento.<br/><br/>
@@ -421,6 +430,7 @@ const SalePage = () => {
             Your browser does not support the video tag.
           </video>
         </VideoWrapper>
+        <p>Masc Mag te mostra o caminho para o constante desenvolvimento, enquanto <strong>O Segredo Da Atração Genuína</strong> te mostra em 6 lições como atrair verdadeiramente uma mulher</p>
       </Section>
         <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>COMPRE AGORA POR R$33,70 - OFERTA DE RELANÇAMENTO</CTAButton>
         <p><strong>Oferta Especial - Não Perca Essa Oportunidade</strong><br/><br/>
@@ -432,16 +442,16 @@ De <span style={{ color: '#FF0000' }}>R$55,90 </span>
         <SectionTitle>A Escolha Agora É Sua</SectionTitle>
         <p>Você tem duas opções neste momento:</p>
         <HighlightedList>
-          <li>1. Continuar no Caminho Atual: Continuar enfrentando os mesmos desafios, lutando com inseguranças, falta de propósito, dificuldades financeiras e relacionamentos problemáticos. É um caminho difícil e solitário.</li>
-          <li>2. Escolher a Transformação: Investir em "Masculinidade Magnética" hoje e começar sua jornada para uma vida de confiança, propósito e sucesso. É um caminho que leva à realização e ao equilíbrio.</li>
+          <li>1. Continuar no Caminho Atual: Continuar enfrentando os mesmos desafios, lutando com inseguranças, falta de propósito, dificuldades financeiras e relacionamentos problemáticos e desinteresse.</li>
+          <li>2. Escolher a Transformação: Investir em Masculinidade Magnética hoje (+BÔNUS) e começar sua jornada para uma vida de confiança, propósito e sucesso. É um caminho que leva à realização e ao equilíbrio.</li>
         </HighlightedList>
-        <p>A escolha é sua.<br/> Você pode continuar lutando contra os mesmos problemas ou pode dar o primeiro passo em direção à vida que sempre desejou.<br/> <strong>Clique no botão abaixo</strong> e transforme sua vida com "Masculinidade Magnética".</p>
+        <p>A escolha é sua.<br/> Você pode continuar lutando contra os mesmos problemas ou pode dar o primeiro passo em direção à vida que sempre desejou.<br/> <strong>Clique no botão abaixo</strong> e transforme sua vida com Masculinidade Magnética.</p>
       </Section>
       <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Quero Adquirir Meu eBook Com 39% de Desconto Agora!</CTAButton>
 
       <Section ref={sectionRef}>
         <SectionTitle>Por Que Isso Funciona?</SectionTitle>
-        <p>“Masculinidade Magnética” não é apenas um eBook. É um programa completo baseado em:</p>
+        <p>Masculinidade Magnética não é apenas um eBook. É um programa completo baseado em:</p>
         <HighlightedList>
           <li><strong>Psicologia do Desenvolvimento Masculino:</strong> Técnicas baseadas em como os homens realmente crescem e se transformam.</li>
           <li><strong>Experiência Pessoal e Profissional:</strong> Insights que vêm de anos de experiência ajudando homens a alcançar seu potencial.</li>
