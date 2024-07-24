@@ -354,7 +354,7 @@ const SalePage = () => {
     </ContainerCabecalho>
     <Container>
       <Section ref={sectionRef}>
-        <SectionTitle>Transforme Sua Vida Hoje com "Masculinidade Magnética"</SectionTitle>
+        <SectionTitle>Transforme Sua Vida Hoje com Masculinidade Magnética</SectionTitle>
         <p><strong>Está Cansado de Correr Atrás e Não Receber Atenção?</strong><br/><br/>
         Você se sente como se sempre estivesse se esforçando para conquistar a atenção de uma mulher, mas nunca obtém o resultado desejado? <br/><br/>
         Talvez você se pergunte por que outros homens conseguem atrair mulheres sem esforço enquanto você fica de lado.<br/><br/>
@@ -410,19 +410,6 @@ const SalePage = () => {
       <Section ref={sectionRef}>
         <SectionTitle>O Que Nossos Leitores Estão Falando</SectionTitle>
         <Carousel testimonials={testimonials} />
-      </Section>
-      <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>COMPRE AGORA POR R$33,70 - OFERTA PARA NOVOS LEITORES!</CTAButton>
-
-      <Section ref={sectionRef}>
-        <SectionTitle>Tudo Que Você Precisa Saber</SectionTitle>
-        <p>Masculinidade Magnética é o seu guia completo para o autoaperfeiçoamento <br/><br/>Com este guia, você aprenderá a:</p>
-        <StyledParagraph>-Construir uma confiança inabalável. <br/><br/>
--Descobrir e seguir seu verdadeiro propósito. <br/><br/>
--Melhorar suas habilidades de relacionamento.<br/><br/>
--Gerenciar suas finanças de forma eficaz.<br/><br/>
--Desenvolver habilidades de liderança.<br/><br/>
--Cuidar da sua saúde física e mental.
-        </StyledParagraph>
         <Section ref={sectionRef}>
         <VideoWrapper>
           <video ref={videoRef} width="800" height="300" autoPlay muted playsInline>
@@ -431,12 +418,26 @@ const SalePage = () => {
           </video>
         </VideoWrapper>
         <p>Masc Mag te mostra o caminho para o constante desenvolvimento, enquanto <strong>O Segredo Da Atração Genuína</strong> te mostra em 6 lições como atrair verdadeiramente uma mulher</p>
-      </Section>
-        <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>COMPRE AGORA POR R$33,70 - OFERTA DE RELANÇAMENTO</CTAButton>
+        </Section>
+        <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>COMPRE AGORA POR R$19,90 - OFERTA DE RELANÇAMENTO</CTAButton>
         <p><strong>Oferta Especial - Não Perca Essa Oportunidade</strong><br/><br/>
-De <span style={{ color: '#FF0000' }}>R$55,90 </span>
- por apenas <u><span style={{ color: '#00FF00' }}>R$33,70</span></u> | <strong>39% de desconto! | +BÔNUS</strong> <br/><br/>- Essa é a sua chance de obter Masculinidade Magnética com um desconto exclusivo de relançamento.<br/><br/> A promoção é válida por tempo LIMITADO</p>
+De <span style={{ color: '#FF0000' }}>R$33,70 </span>
+ por apenas <u><span style={{ color: '#00FF00' }}>R$19,90</span></u> | <strong>47% de Desconto! | +BÔNUS</strong> <br/><br/>- Essa é a sua chance de obter Masculinidade Magnética com um desconto exclusivo de relançamento.<br/><br/> A promoção é válida por tempo <strong>LIMITADO</strong></p>
       </Section>
+
+      <Section ref={sectionRef}>
+        <SectionTitle>Tudo Que Você Precisa Saber</SectionTitle>
+        <p>Masculinidade Magnética é o seu guia completo para o autoaperfeiçoamento <br/><br/>Com este guia, você aprenderá a:</p>
+        <StyledParagraph>-Construir uma confiança inabalável. <br/><br/>
+        -Atrair sem esforço. <br/><br/>
+-Descobrir e seguir seu verdadeiro propósito. <br/><br/>
+-Melhorar suas habilidades de relacionamento.<br/><br/>
+-Gerenciar suas finanças de forma eficaz.<br/><br/>
+-Desenvolver habilidades de liderança.<br/><br/>
+-Cuidar da sua saúde física e mental.
+        </StyledParagraph>
+      </Section>
+      <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>COMPRE AGORA POR R$19,90 - OFERTA PARA NOVOS LEITORES!</CTAButton>
 
       <Section ref={sectionRef}>
         <SectionTitle>A Escolha Agora É Sua</SectionTitle>
@@ -447,7 +448,7 @@ De <span style={{ color: '#FF0000' }}>R$55,90 </span>
         </HighlightedList>
         <p>A escolha é sua.<br/> Você pode continuar lutando contra os mesmos problemas ou pode dar o primeiro passo em direção à vida que sempre desejou.<br/> <strong>Clique no botão abaixo</strong> e transforme sua vida com Masculinidade Magnética.</p>
       </Section>
-      <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Quero Adquirir Meu eBook Com 39% de Desconto Agora!</CTAButton>
+      <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Quero Adquirir Meu eBook Com 47% de Desconto Agora!</CTAButton>
 
       <Section ref={sectionRef}>
         <SectionTitle>Por Que Isso Funciona?</SectionTitle>
@@ -459,7 +460,7 @@ De <span style={{ color: '#FF0000' }}>R$55,90 </span>
           <li><strong>Praticidade e Ação:</strong> Ferramentas práticas e estratégias acionáveis que você pode começar a usar imediatamente.</li>
         </HighlightedList>
         <p>Não é sobre teorias ou promessas vazias. É sobre transformação real e tangível.</p>
-        <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Adquira Agora e Transforme Sua Vida!</CTAButton>
+        <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Quero Acelerar Meu Desenvolvimento!</CTAButton>
       </Section>
 
       <Section ref={sectionRef}>
@@ -482,7 +483,7 @@ De <span style={{ color: '#FF0000' }}>R$55,90 </span>
         </FAQItem>
       </Section>
 
-      <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Aproveite o Desconto de 39% Agora</CTAButton>
+      <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Aproveite o Desconto de 47% Agora</CTAButton>
     </Container>
     <Footer>
       <FooterText>© 2024 <Highlight>Max Strong</Highlight>. Todos os direitos reservados.</FooterText>
