@@ -19,6 +19,7 @@ import perfeito from '/quiz/perfeito.webp';
 import renda from '/quiz/rendaA.jpg';
 import autoimagem from '/quiz/autoimagem.jpg';
 import conversa from '/quiz/conversaA.jpg';
+import woman from '/quiz/woman.jpg';
 import { HighlightedList } from './SellPageB';
 import { Helmet } from 'react-helmet';
 import m from '/M.png';
@@ -162,22 +163,13 @@ const QuizB = () => {
       image: idade,
     },
     {
-        title: "Como você se sente agora?",
+        title: "Como você está agora?",
         options: [
           ["Explorando novas oportunidades", 1],
           ["Buscando direção clara", 2],
           ["Aperfeiçoando habilidades existentes", 3]
         ],
         image: pense,
-    },
-    {
-      title: "Sente que não está se esforçando o suficiente e que poderia dar mais (Lá ele) de si?",
-      options: [
-        ["Sim, frequentemente me pego procrastinando", 1],
-        ["Eu quase sempre faço o que tenho que fazer", 2],
-        ["Não, eu sou perfeito e os outros é que se esforçam mais do que é preciso", 3]
-      ],
-      image: perfeito,
     },
     {
       title: "Você sente que falta um senso de direção claro em sua vida?",
@@ -189,7 +181,7 @@ const QuizB = () => {
       image: proposito,
     },
     {
-        title: "Como você se sente em situações sociais?",
+        title: "Como você é em situações sociais?",
         options: [
           ["Tímido e nervoso", 1],
           ["Depende da situação", 2],
@@ -207,6 +199,15 @@ const QuizB = () => {
         image: autoimagem,
       },
     {
+        title: "Qual foi a última vez que chegou em uma mulher?",
+        options: [
+          ["Na última semana", 3],
+          ["Faz mais de um mês", 2],
+          ["Faz mais de ano", 1]
+        ],
+        image: woman,
+    },
+    {
       title: "Como você se sente ao iniciar uma conversa com uma mulher que você não conhece?",
       options: [
         ["Me sinto muito nervoso e inseguro", 1],
@@ -216,9 +217,18 @@ const QuizB = () => {
       image: conversa, 
     },
     {
-      title: "Como você avalia sua capacidade de gerenciar suas finanças pessoais?",
+      title: "Como anda sua produtividade, acha que poderia dar mais (Lá ele) de si?",
       options: [
-        ["Sempre preocupado com dinheiro, lato no quintal pra economizar cachorro", 1],
+        ["Sim, frequentemente me pego procrastinando", 1],
+        ["Eu quase sempre faço o que tenho que fazer", 2],
+        ["Não, eu sou perfeito e os outros é que se esforçam mais do que é preciso", 3]
+      ],
+      image: perfeito,
+    },
+    {
+      title: "Como você gerencia suas finanças",
+      options: [
+        ["Sempre preocupado, lato no quintal pra economizar cachorro", 1],
         ["Consigo gerenciar com dificuldade, sou brasileiro médio", 2],
         ["Estou seguro e no controle, posso adquirir tudo o que eu quero", 3]
       ],
@@ -235,7 +245,7 @@ const QuizB = () => {
       image: renda,
     },
     {
-      title: "Como você se sente em relação à sua carreira ou situação profissional atual?",
+      title: "Como você avalia a sua situação profissional atual?",
       options: [
         ["Estou satisfeito com minha situação atual", 1],
         ["Estou buscando novas oportunidades ou melhorias", 2],
@@ -253,45 +263,45 @@ const QuizB = () => {
       image: mental,
     },
     {
-      title: "Você enfrenta desafios em construir relacionamentos saudáveis?",
+      title: "Você já esteve em um relacionamento sério?",
       options: [
-        ["Sim, é um problema constante", 1],
-        ["Às vezes, depende da situação", 2],
-        ["Não, tenho relacionamentos sólidos", 3]
+        ["Não, eu sou da pegação", 1],
+        ["Sim, mas não deu em nada", 2],
+        ["Estou em um atualmente", 3]
       ],
       image: relacionamento,
     },
     {
-        title: "Como você acha que uma autoconfiança inabalável afetaria sua vida social e amorosa?",
+        title: "Como você acha que uma confiança inabalável afetaria sua vida social e amorosa?",
         options: [
           ["Mudaria completamente minha vida amorosa", 1],
           ["Melhoraria significativamente minhas interações", 2],
-          ["Não faria muita diferença, já me sinto confiante", 3]
+          ["Acho que não muito, já me sinto confiante", 3]
         ],
         image: confianca,
     },
     {
-        title: "Você gostaria de ter relacionamentos que fluem naturalmente e sem estresse?",
+        title: "Gostaria de saber como atrair pessoas e melhorar/conquistar relacionamentos?",
         options: [
           ["Sim, seria uma mudança enorme para mim", 1],
-          ["Sim, mas não é minha prioridade", 2],
-          ["Não, estou satisfeito com meus relacionamentos atuais", 3]
+          ["Claro, mas acho que dinheiro faz o mesmo serviço", 2],
+          ["Estou satisfeito com meus relacionamentos atuais", 3]
         ],
         image: elevator,
     },
     {
-      title: "Como você se sentiria se tivesse controle total sobre suas finanças?",
+      title: "Como seria a vida se sobrasse dinheiro no fim do mês?",
       options: [
-        ["Muito aliviado e seguro", 1],
-        ["Seria muito bom", 2],
-        ["Já me sinto no controle", 3]
+        ["Compraria as coisas que eu tenho vontade", 1],
+        ["Faria uma reserva de valor, talvez uma casa", 2],
+        ["Eu já tenho o suficiente para investir e se divertir", 3]
       ],
       image: dinheiro,
     },
     {
-        title: "Você já considerou explorar novos recursos para seu desenvolvimento pessoal?",
+        title: "Você já considerou investir em conhecimento para acelerar sua jornada em todos esses aspectos?",
         options: [
-          ["Sim, estou interessado em aprender mais", 1],
+          ["Sim, e estou interessado em aprender mais", 1],
           ["Gostaria de descobrir novas possibilidades", 1],
           ["Estou aberto a explorar novas estratégias", 1]
         ],
@@ -383,24 +393,24 @@ const QuizB = () => {
     setProblems([]);
     setAmbitions([]);
     
-    if (finalScore <= 20) {
+    if (finalScore <= 25) {
       setProblems([
         "Falta de direção e propósito claro na vida.",
-        "Insegurança e baixa autoestima, especialmente em interações sociais.",
-        "Dificuldades financeiras e gestão.",
-        "Relacionamentos instáveis e problemáticos, incluindo dificuldades em atrair e manter a atenção feminina."
+        "Insegurança e baixa autoestima, especialmente com mulheres",
+        "Falta de grana",
+        "Relacionamentos problemáticos, incluindo dificuldades em atrair e manter a atenção feminina."
       ]);
       setAmbitions([
         "Encontrar um propósito significativo.",
         "Desenvolver autoconfiança e segurança emocional para se sentir mais atraente.",
-        "Melhorar a saúde financeira e o controle sobre o dinheiro.",
+        "Aumentar a renda junto com conhecimento de gestão",
         "Construir relacionamentos mais saudáveis e satisfatórios, especialmente com o sexo oposto."
       ]);
       setResult({
         title: "Explorador Perdido",
-        description: "Você está em um ponto onde busca sentido e direção na vida. Enfrenta desafios significativos que impactam sua autoconfiança e capacidade de atrair a atenção feminina. Focar em autoconhecimento e habilidades sociais ajudará a navegar por esses desafios e melhorar suas interações."
+        description: "Você está em um ponto onde busca sentido e direção na vida. Enfrenta desafios significativos que impactam sua autoconfiança e capacidade de atrair a atenção feminina. Focar em autoconhecimento e habilidades sociais ajudará a navegar por esses desafios e melhorar sua vida como um todo."
       });
-    } else if (finalScore <= 30) {
+    } else if (finalScore <= 33) {
       setProblems([
         "Falta de clareza em objetivos e metas.",
         "Necessidade de desenvolver habilidades específicas, incluindo sociais.",
@@ -415,7 +425,7 @@ const QuizB = () => {
         title: "Buscador de Clareza",
         description: "Você tem alguns objetivos e um senso geral de direção, mas ainda precisa de mais clareza e foco, especialmente em como se destacar em interações sociais e atrair a atenção feminina. Refinar suas metas e desenvolver suas habilidades sociais são os próximos passos."
       });
-    } else if (finalScore <= 40) {
+    } else if (finalScore <= 43) {
       setProblems([
         "Desejo contínuo de melhorar e aperfeiçoar habilidades, incluindo habilidades de atração e interação.",
         "Busca por conhecimentos e estratégias avançadas para aumentar seu impacto social.",

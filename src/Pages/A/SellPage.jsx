@@ -151,11 +151,11 @@ const SectionTitle = styled.h2`
   color: #BB86FC;
 
   @media (max-width: 768px) {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   @media (max-width: 480px) {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 `;
 
