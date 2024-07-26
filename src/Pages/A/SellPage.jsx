@@ -9,6 +9,7 @@ import ogim from '/ogim.png';
 import { Helmet } from 'react-helmet';
 import CTAButton from '../../Components/CTAButton.jsx';
 import m from '/M.png';
+import pic1 from '/testimonials/pic1.jpg';
 
 
 // Styled Components
@@ -303,30 +304,37 @@ const SalePage = () => {
       author: "Anônimo"
     },
     {
-      message: "Eu estava perdido, sem direção, mas depois de ler 'Masculinidade Magnética', minha vida mudou completamente. Agora, acordo todos os dias com um propósito claro e uma confiança renovada. Recomendo a todos os homens que querem transformar suas vidas.",
-      author: 'Pediu anonimato.'
-    },
-    {
-      message: "Este eBook me deu as ferramentas que eu precisava para superar minhas inseguranças e melhorar meus relacionamentos. Minha vida financeira também nunca esteve tão organizada. Um investimento que valeu cada centavo.",
-      author: 'João P., Consultor Financeiro'
+      message: "Esse livro me deu as ferramentas que eu precisava, minha vida financeira também nunca esteve tão organizada. Um investimento que valeu cada centavo.",
+      author: 'João P., Pintor',
     },
     {
       message: "A combinação de sabedoria antiga e estratégias modernas é simplesmente brilhante. 'Masculinidade Magnética' é um guia essencial para qualquer homem que queira alcançar o sucesso e a realização.",
-      author: 'Roberto L., Líder de Equipe'
+      author: 'Roberto M., Líder de Equipe'
     },
     {
-      message: "Eu realmente não achava que o livro tinha tanto conteúdo útil, comprei incrédulo, já tinha gastado dinheiro com vários cursos de 'gurus da sedução', mas nenhum deles conseguiu realmente abrir meus olhos e dar uma direção. TMJ MAX! (Ainda uso o livro para consultas de vez em quando).",
+      message: "Eu realmente não achava que o livro tinha tanto conteúdo útil, comprei incrédulo, já tinha gastado dinheiro com vários cursos de 'gurus da sedução' [..], mas nenhum deles conseguiu realmente abrir meus olhos e dar uma direção. TMJ MAX! (Ainda uso o livro para consultas de vez em quando).",
       author: 'Marcelo C., Programador'
     },
     {
       message: "Depois de ler Masculinidade Magnética, minha confiança disparou. Não só as mulheres começaram a notar, mas eu também consegui uma promoção no trabalho.",
-      author: "Johan A., Gerente"
+      author: "João A., Gerente"
     },
     {
       message: "Conheci minha amada durante a minha jornada de autodesenvolvimento. Ela chegou pra mim no momento certo e transformou minha vida para melhor. Obirgado Max por escrever essa peça",
-      author: "Carlos S., Empreendedor"
+      author: "Matheus S., Empreendedor"
     },
-    // Incluir mais depoimentos conforme necessário
+    {
+      message: "Cara, eu sempre fui muito tímido e fechado, tinha um ou dois amigos na escola e nunca tive coragem de chegar em uma menina. O tempo passou, e eu cheguei aos [**] anos sem nunca ter pegado ngm. Seu livro foi um pontape pra eu sair de casa. Tava começando a facul e fiz novos amigos, conh...",
+      author: "Elias D., Cursa arquitetura",
+    },
+    {
+      message: "Envie você também o seu relato por email pra gente bater um papo!",
+      author: "Max Strong"
+    },
+    {
+      message: "Eu demorei pra ver algum resultado. Diferente do que a maioria acha, esse livro não é sobre pegar mulher. É sobre autoconhecimento e desenvolvimento. Mulheres vem e vão, ser atraente é só uma consequência de focar em si. O maior resultado é conseguir ficar sozinho e evitar interesseira...",
+      author: "Josué P., Cursa ADS",
+    },
   ];
   
   
@@ -349,49 +357,76 @@ const SalePage = () => {
 
     
     <ContainerCabecalho>
-      <Headline ref={headlineRef}>Está Cansado de Ser Ignorado Pelas Mulheres?</Headline>
-      <Subheadline ref={subheadlineRef}>Descubra o segredo dos homens que elas desejam. Transforme sua vida com o guia <u>Masculinidade Magnética</u>.</Subheadline>
+      <Headline ref={headlineRef}>Descubra o Segredo para Ser Inesquecível para Elas</Headline>
+      <Subheadline ref={subheadlineRef}>Aprenda as estratégias que tornam os homens irresistíveis. Melhore sua vida com o guia <u>Masculinidade Magnética</u>.</Subheadline>
     </ContainerCabecalho>
     <Container>
       <Section ref={sectionRef}>
-        <SectionTitle>Transforme Sua Vida Hoje com Masculinidade Magnética</SectionTitle>
-        <p><strong>Está Cansado de Correr Atrás e Não Receber Atenção?</strong><br/><br/>
-        Você se sente como se sempre estivesse se esforçando para conquistar a atenção de uma mulher, mas nunca obtém o resultado desejado? <br/><br/>
-        Talvez você se pergunte por que outros homens conseguem atrair mulheres sem esforço enquanto você fica de lado.<br/><br/>
-        A verdade é que a atenção feminina não é dada aos que se <strong>esforçam desesperadamente</strong>. Ela vai para aqueles que estão focados em si mesmos e em suas próprias jornadas.<br/><br/>
-        <strong>Masculinidade Magnética</strong> mostra como você pode se tornar o tipo de homem que naturalmente atrai o interesse e a atenção, sem precisar implorar por isso.
+        <SectionTitle>Quer Continuar Assim?</SectionTitle>
+        <p><strong>Você Não Cansa de Correr Atrás Para Receber Atenção?</strong><br/><br/>
+        Você sabe como é se esforçar para conquistar a atenção de uma mulher. Mas parece que quanto mais você se esforça, <strong>menos elas te querem</strong>. :(<br/><br/>
+        Talvez você se pergunte por quê alguns homens conseguem atrair mulheres sem esforço enquanto <strong style={{color: 'red'}}>você vira amiguinho</strong>.<br/><br/>
+        A verdade é que a atenção feminina não é dada aos que se esforçam <strong style={{color: 'red'}}>desesperadamente</strong>. Ela vai para aqueles que estão focados em si mesmos e em suas próprias jornadas.<br/><br/>
+        <strong>Esse é o Segredo:</strong> Parar de focar <strong style={{color: 'yellow'}}>NELAS</strong>. Elas não querem ser seu objetivo de vida. Não importa o que elas digam, a verdade é uma só: <strong style={{color: 'red'}}>Elas querem</strong> os homens que almejam o topo. Elas querem a emoção de chegar ao topo junto deles.
         </p>
       </Section> 
 
       <Section ref={sectionRef}>
         <SectionTitle>Uma Nova Perspectiva</SectionTitle>
-        <p>Eu entendo onde você está agora.<br/><br/>
-          A sensação de ser constantemente ignorado pelas mulheres, de lutar para crescer.<br/><br/>
-          Já estive lá. Todos os homens enfrentam essas dificuldades.<br/><br/>
-          Mas e se eu lhe dissesse que essa <strong>sensação de rejeição</strong> pode ser transformada em <strong>confiança e clareza</strong>?<br/><br/>
-          Não é apenas sobre atrair mulheres. É sobre se tornar o homem que naturalmente atrai atenção porque ele está no controle da sua própria vida.</p>
+        <p><strong><strong style={{color: 'yellow'}}>Ou</strong> Você Está no Topo <strong style={{color: 'yellow'}}>Ou</strong> Quer Estar <strong style={{color: 'yellow'}}>Ou</strong>  Vira a Segunda (Terceira, Quarta...) <strong style={{color: 'red'}}>Opção</strong>.</strong><br/><br/>
+          Mas eu entendo onde você está agora.<br/><br/>
+          A sensação de ser constantemente ignorado e de se sentir inferior<br/><br/>
+          Mas e se eu te dissesse que essa <strong>sensação de rejeição</strong> pode ser transformada em <strong>confiança</strong>?<br/><br/>
+        </p>
         <p><strong>Imagine uma Vida Diferente</strong></p>
-        <HighlightedList>
-          <li>Imagine acordar todos os dias com um objetivo claro e um destino que você mesmo escolheu.</li>
-          <li>Imagine ser tão confiante que você não precisa se esforçar para ser notado, seja pelas mulheres ou no trabalho.</li>
-          <li>Imagine construir relacionamentos que são fontes de apoio e inspiração, em vez de frustração.</li>
-          <li>Imagine ter um plano claro para alcançar segurança financeira e sucesso duradouro.</li>
-          <li>Imagine liderar com carisma e influência, tanto na vida pessoal quanto profissional.</li>
-          <li>Imagine estar em sua melhor forma física e mental, equilibrado e energizado.</li>
-        </HighlightedList>
-        <p>Essas não são apenas ilusões. Essa é a realidade que <strong>Masculinidade Magnética</strong> pode guiar você a alcançar.</p>
+        <p style={{textAlign: 'justify'}}>
+        <strong style={{color: 'yellow'}}>Imagine</strong> ser o centro das atenções em qualquer ambiente, sem esforço algum.<br/>
+        <strong style={{color: 'yellow'}}>Imagine</strong> ter mulheres atraídas por você naturalmente, sem precisar correr atrás.<br/>
+        <strong style={{color: 'yellow'}}>Imagine</strong> dominar suas finanças, com investimentos inteligentes que garantem sua liberdade financeira.<br/>
+        <strong style={{color: 'yellow'}}>Imagine</strong> ter uma aparência que faz cabeças virarem e pessoas comentarem sobre sua boa forma física.<br/>
+        <strong style={{color: 'yellow'}}>Imagine</strong> acordar todos os dias com uma energia inesgotável, pronto para conquistar o mundo.<br/>
+        </p>
+
+        <p>Pode parecer rídiculo. Mas essa é uma realidade com muitas vantagens, que você pode viver se quiser. <br/><br/>E <strong>Masculinidade Magnética</strong> pode te ajudar a alcançar.</p>
+        
       </Section>
 
       <Section ref={sectionRef}>
-        <SectionTitle>Por Que Este eBook é Diferente?</SectionTitle>
-        <p>Nosso eBook de 200+ páginas oferece um guia completo para você se tornar o homem que sempre quis ser.</p>
+        <SectionTitle>Por Que Este Livro é Diferente?</SectionTitle>
+        <p>Nosso eBook de <strong>200+ páginas</strong> oferece um guia completo para você se tornar o homem que sempre quis ser.</p>
         <HighlightedList>
-          <li><strong>Atração Natural:</strong> Descubra como a verdadeira confiança e um propósito forte transformam você em um imã para mulheres.</li>
-          <li><strong>Construção de Relacionamentos:</strong> Estratégias práticas para construir conexões genuínas e duradouras com mulheres.</li>
-          <li><strong>Propósito de Vida:</strong> Encontre e siga seu verdadeiro propósito, atraindo mulheres que querem fazer parte da sua jornada.</li>
-          <li><strong>Sucesso em Todos os Campos:</strong> Gerencie suas finanças, melhore sua saúde e desenvolva habilidades de liderança que impressionam a todos.</li>
-          <li><strong>Confiança Inabalável:</strong> Supere inseguranças e torne-se o homem que você e as mulheres admiram.</li>
-          <li><strong>Segredos Ancestrais:</strong> Aprenda com mestres antigos e modernos - de Platão a Tony Robbins - e aplique sua sabedoria para uma transformação real.</li>
+        
+
+          <li>
+            <strong style={{
+  color: '#39ff14', // Verde fluorescente
+  textShadow: `0 0 0px #39ff14, 0 0 6px #39ff14, 0 0 9px #39ff14, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000`
+}}>Atração Natural</strong>: Descubra como a verdadeira confiança e um propósito forte transformam você em um imã para mulheres.</li>
+          <li>
+            <strong style={{
+  color: '#39ff14', // Verde fluorescente
+  textShadow: `0 0 0px #39ff14, 0 0 6px #39ff14, 0 0 9px #39ff14, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000`
+}}>Construção de Relacionamentos</strong>: Estratégias práticas para construir conexões genuínas e duradouras com mulheres.</li>
+          <li>
+            <strong style={{
+  color: '#39ff14', // Verde fluorescente
+  textShadow: `0 0 0px #39ff14, 0 0 6px #39ff14, 0 0 9px #39ff14, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000`
+}}>Propósito de Vida</strong>: Encontre e siga seu verdadeiro propósito, atraindo mulheres que querem fazer parte da sua jornada.</li>
+          <li>
+            <strong style={{
+  color: '#39ff14', // Verde fluorescente
+  textShadow: `0 0 0px #39ff14, 0 0 6px #39ff14, 0 0 9px #39ff14, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000`
+}}>Sucesso em Todos os Campos</strong>: Gerencie suas finanças, melhore sua saúde e desenvolva habilidades de liderança que impressionam a todos.</li>
+          <li>
+            <strong style={{
+  color: '#39ff14', // Verde fluorescente
+  textShadow: `0 0 0px #39ff14, 0 0 6px #39ff14, 0 0 9px #39ff14, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000`
+}}>Confiança Inabalável</strong>: Supere inseguranças e torne-se o homem que você e as mulheres admiram.</li>
+          <li>
+          <strong style={{
+  color: '#39ff14', // Verde fluorescente
+  textShadow: `0 0 0px #39ff14, 0 0 6px #39ff14, 0 0 9px #39ff14, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000`
+}}>Segredos Ancestrais</strong>: Aprenda com mestres antigos e modernos - de Platão a Tony Robbins - e aplique sua sabedoria para uma transformação real.</li>
         </HighlightedList>
       </Section>
 
@@ -443,10 +478,26 @@ De <span style={{ color: '#FF0000' }}>R$33,70 </span>
         <SectionTitle>A Escolha Agora É Sua</SectionTitle>
         <p>Você tem duas opções neste momento:</p>
         <HighlightedList>
-          <li>1. Continuar no Caminho Atual: Continuar enfrentando os mesmos desafios, lutando com inseguranças, falta de propósito, dificuldades financeiras e relacionamentos problemáticos e desinteresse.</li>
-          <li>2. Escolher a Transformação: Investir em Masculinidade Magnética hoje (+BÔNUS) e começar sua jornada para uma vida de confiança, propósito e sucesso. É um caminho que leva à realização e ao equilíbrio.</li>
+          <li><strong style={{
+  color: '#ff0000', // Vermelho
+  textShadow: `
+    0 0 1px #ff0000, 0 0 6px #ff0000, 0 0 9px #ff0000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000`
+}}>
+1. Continuar no Caminho Atual</strong>: Continuar enfrentando os mesmos desafios, lutando com inseguranças, falta de propósito, dificuldades financeiras e relacionamentos problemáticos e desinteresse.</li>
+          <li><strong style={{
+  color: '#39ff14', // Verde fluorescente
+  textShadow: `0 0 1px #39ff14, 0 0 6px #39ff14, 0 0 9px #39ff14, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000`
+}}>
+2. Escolher a Transformação</strong>: Investir em Masculinidade Magnética hoje <strong style={{
+  color: '#39ff14', // Verde fluorescente
+  textShadow: `0 0 0px #39ff14, 0 0 6px #39ff14, 0 0 9px #39ff14, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000`
+}}>(+BÔNUS)</strong> e começar sua jornada para uma vida de confiança, propósito e sucesso. É um caminho que leva à realização e ao equilíbrio.</li>
         </HighlightedList>
-        <p>A escolha é sua.<br/> Você pode continuar lutando contra os mesmos problemas ou pode dar o primeiro passo em direção à vida que sempre desejou.<br/> <strong>Clique no botão abaixo</strong> e transforme sua vida com Masculinidade Magnética.</p>
+        <p><strong style={{
+  color: '#ff0000', // Vermelho
+  textShadow: `
+    0 0 1px #ff0000, 0 0 6px #ff0000, 0 0 9px #ff0000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000`
+}}>A escolha é sua.</strong><br/> Você pode continuar lutando contra os mesmos demônios ou pode dar o primeiro passo em direção à vida que sempre desejou.<br/> <strong style={{color: 'yellow'}}>Clique no botão abaixo</strong> e transforme sua vida com Masculinidade Magnética.</p>
       </Section>
       <CTAButton link={"https://pay.kiwify.com.br/iiVz3P0"}>Quero Adquirir Meu eBook Com 47% de Desconto Agora!</CTAButton>
 

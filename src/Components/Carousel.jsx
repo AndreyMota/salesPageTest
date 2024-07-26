@@ -48,16 +48,33 @@ const Testimonial = styled.div`
   margin: 10px;
   color: #E0E0E0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-  
+  display: flex;
+  align-items: center; /* Alinha a imagem e o texto verticalmente */
   @media (max-width: 768px) {
     padding: 20px 15px; /* Ajusta o padding para telas menores */
   }
 `;
 
-const Author = styled.p`
+const TestimonialContent = styled.div`
+  flex: 1;
+  text-align: left;
+`;
+
+const Author = styled.div`
+  display: flex;
+  align-items: center;
   margin-top: 10px;
   font-weight: bold;
   color: #BB86FC;
+`;
+
+
+const AuthorImage = styled.img`
+  width: 50px; /* Ajuste conforme necessário */
+  height: 50px; /* Ajuste conforme necessário */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
 `;
 
 const NavigationButton = styled.button`
@@ -125,8 +142,11 @@ const Carousel = ({ testimonials }) => {
         {testimonials.map((testimonial, index) => (
           <CarouselItem key={index} isCurrent={index === currentIndex}>
             <Testimonial>
-              {testimonial.message}
-              <Author>{testimonial.author}</Author>
+              {testimonial.image && <AuthorImage src={testimonial.image} alt={`${testimonial.author}'s photo`} />}
+              <TestimonialContent>
+                {testimonial.message}
+                <Author>{testimonial.author}</Author>
+              </TestimonialContent>
             </Testimonial>
           </CarouselItem>
         ))}
