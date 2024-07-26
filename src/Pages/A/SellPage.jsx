@@ -357,18 +357,20 @@ const SalePage = () => {
 
     
     <ContainerCabecalho>
-      <Headline ref={headlineRef}>Descubra o Segredo para Ser Inesquecível para Elas</Headline>
-      <Subheadline ref={subheadlineRef}>Aprenda as estratégias que tornam os homens irresistíveis. Melhore sua vida com o guia <u>Masculinidade Magnética</u>.</Subheadline>
+      <Headline ref={headlineRef}>Transforme-se no Homem que Elas Desejam</Headline>
+      <Subheadline ref={subheadlineRef}>Domine a arte da atração natural e melhore todos os aspectos da sua vida</Subheadline>
     </ContainerCabecalho>
     <Container>
+    <CTAButton>Comece Sua Jornada</CTAButton>
       <Section ref={sectionRef}>
         <SectionTitle>Quer Continuar Assim?</SectionTitle>
         <p><strong>Você Não Cansa de Correr Atrás Para Receber Atenção?</strong><br/><br/>
-        Você sabe como é se esforçar para conquistar a atenção de uma mulher. Mas parece que quanto mais você se esforça, <strong>menos elas te querem</strong>. :(<br/><br/>
+        Você sabe como é se esforçar para conquistar a atenção de uma mulher. Mas parece que quanto mais você se esforça, <strong>menos elas te querem</strong>.<br/><br/>
         Talvez você se pergunte por quê alguns homens conseguem atrair mulheres sem esforço enquanto <strong style={{color: 'red'}}>você vira amiguinho</strong>.<br/><br/>
         A verdade é que a atenção feminina não é dada aos que se esforçam <strong style={{color: 'red'}}>desesperadamente</strong>. Ela vai para aqueles que estão focados em si mesmos e em suas próprias jornadas.<br/><br/>
         <strong>Esse é o Segredo:</strong> Parar de focar <strong style={{color: 'yellow'}}>NELAS</strong>. Elas não querem ser seu objetivo de vida. Não importa o que elas digam, a verdade é uma só: <strong style={{color: 'red'}}>Elas querem</strong> os homens que almejam o topo. Elas querem a emoção de chegar ao topo junto deles.
         </p>
+        <CTAButton>Transforme Sua Vida Agora</CTAButton>
       </Section> 
 
       <Section ref={sectionRef}>

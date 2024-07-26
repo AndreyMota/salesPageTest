@@ -496,7 +496,10 @@ const Quiz = () => {
               </HighlightedList>
           </div>
           <Subtitle>O segredo é parar de correr atrás das borboletas... E cuidar do jardim para que elas venham até você.</Subtitle>
-          <ResultDescription>Descubra os segredos do progresso acelerado e do desenvolvimento pessoal, inspirados pelos ensinamentos de antigos mestres e filósofos contemporâneos. Explore como você pode transformar sua vida em um curto espaço de tempo.</ResultDescription>
+          <ResultDescription>
+            Descubra os segredos do progresso acelerado e do desenvolvimento pessoal. Transforme sua vida rapidamente com ensinamentos poderosos. <strong>Clique aqui para começar agora!</strong>
+          </ResultDescription>
+
 
           <OptionButton bgcolor="#28a745" textColor="#FFFFFF" onClick={handleRedirectClick}>
             Conheça estratégias para o seu crescimento. Clique aqui para saber mais.

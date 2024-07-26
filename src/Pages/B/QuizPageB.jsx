@@ -122,18 +122,32 @@ const ResultDescription = styled.p`
 `;
 
 const CTAButton = styled.button`
-  background-color: #FF6F61;
-  color: #FFFFFF;
-  border: none;
-  padding: 10px 20px;
+  background-image: linear-gradient(to right, #007BFF, #0056B3); /* Gradiente de azul */
+  color: #FFFFFF; /* Cor do texto para contraste */
+  text-decoration: none;
+  max-width: 600px;
+  padding: 15px 30px; /* Ajuste o padding conforme necessário */
   font-size: 1.2em;
-  cursor: pointer;
-  margin-top: 20px;
+  display: block;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-align: center;
+  margin: 20px auto;
+  box-shadow: 0px 14px 56px -11px #0056B3; /* Sombra azul escura */
 
   &:hover {
-    background-color: #E55C50;
+    background-image: linear-gradient(to right, #9E6EDC, #6E44FF); /* Gradiente ao passar o mouse */
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1em;
+    padding: 12px 24px; /* Ajuste o padding para telas menores */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9em;
+    padding: 10px 20px; /* Ajuste o padding para dispositivos muito pequenos */
   }
 `;
 
@@ -505,11 +519,13 @@ const QuizB = () => {
               </HighlightedList>
           </div>
           <Subtitle>O segredo é parar de correr atrás das borboletas... E cuidar do jardim para que elas venham até você.</Subtitle>
-          <ResultDescription>Descubra os segredos do progresso acelerado e do desenvolvimento pessoal, inspirados pelos ensinamentos de antigos mestres e filósofos contemporâneos. Explore como você pode transformar sua vida em um curto espaço de tempo.</ResultDescription>
+          <ResultDescription>
+            Descubra os segredos do progresso acelerado e do desenvolvimento pessoal. Transforme sua vida rapidamente com ensinamentos poderosos. <strong>Clique abaixo para começar agora!</strong>
+          </ResultDescription>
 
-          <OptionButton bgcolor="#28a745" textColor="#FFFFFF" onClick={handleRedirectClick}>
+          <CTAButton onClick={handleRedirectClick}>
             Conheça estratégias para o seu crescimento. Clique aqui para saber mais.
-          </OptionButton>
+          </CTAButton>
         </>
       )}
     </QuizContainer>
